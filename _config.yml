@@ -5,9 +5,6 @@ description: 'Artificial Intelligence trends and concepts made easy.' # this mea
 permalink: ':title:output_ext'
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://YuechenTUM.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-logo: "/assets/img/branding/Logo.JPG"
-logo-icon: "/assets/img/branding/Logo.JPG"
-logo-icon-SEO: "/assets/img/branding/Logo.JPG" # must be a non SVG file
 
 # Night/Dark mode
 # Default mode is "auto", "auto" is for auto nightshift
