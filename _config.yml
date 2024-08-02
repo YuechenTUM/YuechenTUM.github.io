@@ -27,17 +27,15 @@ highlight_theme: syntax-base16.monokai.dark # select a dark theme for the code h
 # Author settings
 author: Yuechen Chen # add your name
 author-pic: 社交平台头像.JPG
-about-author: Student, MSc, research enthusiast. Avid learner with diverse interests in coding, machine learning, artificial intelligence and reinforcement learning. 17+ years of experience working in multinational corporations.
+about-author: BEng in Built Environment and Energy Application, MSc in Architectural Engineering, interested in indoor climate and building performance. Passionate about exploring the world and photography.
 
 # Contact links
 email: yuechenC@outlook.com # Add your Email address
 phone: # Add your Phone number
 website: https://YuechenTUM.github.io # Add your website
-linkedin: amaynez # Add your Linkedin handle
-github: amaynez # Add your Github handle
-twitter: '@MvmThe' # Add your Twitter handle
-bandcamp: armandomaynez # Add your Bandcamp username
-stackoverflow: stackoverflow # Add your stackoverflow account
+linkedin: https://www.linkedin.com/in/yuechenc/ # Add your Linkedin handle
+github: https://github.com/YuechenTUM # Add your Github handle
+instagram: https://www.instagram.com/chen_yuechen/ # Add your stackoverflow account
 
 # Newsletter
 mailchimp: "https://github.us1.list-manage.com/subscribe/post?u=8ece198b3eb260e6838461a60&amp;id=397d90b5f4"
