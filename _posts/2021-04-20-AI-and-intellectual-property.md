@@ -2,13 +2,14 @@
 layout: post
 read_time: true
 show_date: true
-title: "Can long-term CFD transient simulations be accelerated??"
+title: "Can long-term CFD transient simulations be accelerated?"
 date: 2024-06-20
 img: posts/20240620/Dronn-p.jpg
+img_caption: "Photo by Bent Bach"
 tags: [CFD, High-performance cluster, Ansys fluent, 3D model]
 category: opinion
 author: Yueechen
-description: "As neural networks are used more and more in the creative process, text, images and even music are now created by AI, but who owns the copyright for those works?"
+description: "When using the commercial software Fluent for simulation, in addition to focusing on the results, time cost is also a significant factor. So can long-term CFD transient simulations be accelerated?"
 ---
 Recently I was [reading an article](https://www.rollingstone.com/music/music-features/nirvana-kurt-cobain-ai-song-1146444/) about a cool project that intends to have a neural network create songs of the late club of the 27 (artists that have tragically died at age 27 or near, and in the height of their respective careers), artists such as Amy Winehouse, Jimmy Hendrix, Curt Cobain and Jim Morrison.
 
