@@ -55,7 +55,7 @@ extensions:
 # Comments
 comments: disqus  #[disqus, utteranc]
 comments_opts:
-  comments_curtain: # leave empty to show the disqus embed directly
+  comments_curtain: yes # leave empty to show the disqus embed directly
   # Disqus
   discus_identifier: Yuechen Chen # Add your discus identifier
 
