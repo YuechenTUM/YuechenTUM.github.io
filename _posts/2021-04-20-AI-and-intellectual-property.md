@@ -4,7 +4,7 @@ read_time: true
 show_date: true
 title: "Can long-term CFD transient simulations be accelerated??"
 date: 2024-06-20
-img: posts/20210420/post8-rembrandt.jpg
+img: posts/20240620/Pit-heat-storage-in-Dronninglund.png
 tags: [CFD, High-performance cluster, Ansys fluent, 3D model]
 category: opinion
 author: Yueechen
