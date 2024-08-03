@@ -11,11 +11,9 @@ category: opinion
 author: Yueechen
 description: "When using the commercial software Fluent for simulation, in addition to focusing on the results, time cost is also a significant factor. So can long-term CFD transient simulations be accelerated?"
 ---
-I recently finished writing my master's thesis. During the course of this project, in the first three months, I actively cooperated with a Chinese university to write a code specifically for pit thermal storage simulation using C++ which can accelerate fundamentally. And I completed the development of the information exchange code for the common mesh of the two-dimensional interface. However, for various reasons, I finally chose to use the commercial software Ansys Fluent to simulate a three-dimensional model for a year span, hoping to find a lower limit for the balance between simulation speed and quality.
-
+I recently finished writing my master's thesis. During the course of the first three months, I actively cooperated with a Chinese university and tried to develop a program specifically for pit thermal storage simulation using C++ which can accelerate fundamentally. and phased the development of the information exchange code for the common mesh of the two-dimensional interface. However, for various reasons, I finally had to use the commercial software Ansys Fluent to simulate a three-dimensional model for a year, hoping to find a limit for the trade-off between simulation speed and quality.
 
 <iframe width="560" height="315" src="https://youtu.be/zE16Qd68n1Q?si=bYIzrzcY9tM2dfY-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 
 
 
