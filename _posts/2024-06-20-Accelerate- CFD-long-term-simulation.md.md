@@ -13,7 +13,12 @@ description: "When using the commercial software Fluent for simulation, in addit
 ---
 I recently finished writing my master's thesis. During the course of this project, in the first three months, I actively cooperated with a Chinese university to write a code specifically for pit thermal storage simulation using C++ which can accelerate fundamentally. And I completed the development of the information exchange code for the common mesh of the two-dimensional interface. However, for various reasons, I finally chose to use the commercial software Ansys Fluent to simulate a three-dimensional model for a year span, hoping to find a lower limit for the balance between simulation speed and quality.
 
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=zE16Qd68n1Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://youtu.be/zE16Qd68n1Q?si=bYIzrzcY9tM2dfY-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+
 
 
 The project was created by [Over the Bridge](https://overthebridge.org), an organization dedicated to increase awareness on mental health and substance abuse in the music industry, trying to denormalize and remove the glamour around such illnesses within the music community.
