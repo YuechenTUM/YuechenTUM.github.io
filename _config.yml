@@ -61,7 +61,7 @@ comments_opts:
   label: # The GitHub comments label
   theme: # The GitHub comment's there. e.g. github-dark
   # Disqus
-  discus_identifier: Yuechen Chen # Add your discus identifier
+  discus_identifier: yuechens-blog # Add your discus identifier
 
 # Build settings
 markdown: kramdown
