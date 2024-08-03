@@ -24,12 +24,12 @@
         {% elsif site.comments == 'disqus' and site.comments_opts.discus_identifier %}
             <div id="comment-layout"></div>
             <script>
-                (function() { // DON'T EDIT BELOW THIS LINE
+                (function () {
                     var d = document, s = d.createElement('script');
-                    s.src = 'https://yuechens-blog.disqus.com/embed.js';
+                    s.src = '//{{ site.comments.discus_identifier }}.disqus.com/embed.js';
                     s.setAttribute('data-timestamp', +new Date());
                     (d.head || d.body).appendChild(s);
-            })();
+                })();
             </script>
             <noscript>Please enable JavaScript to view the comments.</noscript>
         {% endif %}
