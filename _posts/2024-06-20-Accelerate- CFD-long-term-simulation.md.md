@@ -13,9 +13,6 @@ description: "When using the commercial software Fluent for simulation, in addit
 ---
 I recently finished writing my master's thesis. During the course of the first three months, I actively cooperated with a Chinese university and tried to develop a program specifically for pit thermal storage simulation using C++ which can accelerate fundamentally. and phased the development of the information exchange code for the common mesh of the two-dimensional interface. However, for various reasons, I finally had to use the commercial software Ansys Fluent to simulate a three-dimensional model for a year, hoping to find a limit for the trade-off between simulation speed and quality.
 
-
-
-
 The project was created by [Over the Bridge](https://overthebridge.org), an organization dedicated to increase awareness on mental health and substance abuse in the music industry, trying to denormalize and remove the glamour around such illnesses within the music community.
 
 They are using Google's [Magenta](https://magenta.tensorflow.org), which is a neural network that precisely was conceived to explore the role of machine learning within the creative process. Magenta has been used to create a brand new "Beatles" song or even there was a band that [used it to write a full album](https://arstechnica.com/gaming/2019/08/yachts-chain-tripping-is-a-new-landmark-for-ai-music-an-album-that-doesnt-suck/) in 2019.
