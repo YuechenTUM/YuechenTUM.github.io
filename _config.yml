@@ -41,11 +41,11 @@ instagram: chen_yuechen # Add your stackoverflow account
 mailchimp: "https://github.us22.list-manage.com/subscribe/post?u=071e8a2f401fd078afef64a9b&id=2a533031ad&f_id=0090d0e1f0"
 
 # Tracker
-analytics: G-R8SZS2YBZK
-fbadmin: ar.maybach
+analytics: G-ZPJLLREE76
+fbadmin: Yuechen Chen
 
 # Paginate
-paginate: 6
+paginate: 5
 paginate_path: 'page:num'
 words_per_minute: 200
 
