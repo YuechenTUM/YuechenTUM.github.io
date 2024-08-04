@@ -2,7 +2,7 @@
 layout: post
 read_time: true
 show_date: true
-title: "Can long-term CFD transient simulations be accelerated?"
+title: "Can CFD simulations be accelerated?"
 date: 2024-06-20
 img: posts/20240620/HPC.jpg
 img_caption: "Photo by Bent Bach"
@@ -11,7 +11,7 @@ category: opinion
 author: Yueechen
 description: "When using the commercial software Fluent for simulation, in addition to focusing on the results, time cost is also a significant factor. So can long-term CFD transient simulations be accelerated?"
 ---
-Recently, I finished writing my master's thesis. During these six months, time has always been an important factor that bothered me. In the first three months, I actively cooperated with a Chinese university to try to develop a program specifically for pit thermal storage simulation in C++ to fundamentally accelerate the simulation and phase in the development of the information exchange code for the universal grid of the two-dimensional interface. But for various reasons, I eventually had to use the commercial software Ansys Fluent to simulate a three-dimensional model for a year, and how to speed up became the issue I considered the most in the rest three months.
+Recently, I finished writing my master's thesis. During these six months, time has always been an important factor that bothered me. In the first three months, I actively cooperated with a Chinese university and try to develop a program specifically for pit thermal storage simulation in C++ to fundamentally accelerate the simulation. But for various reasons, I eventually had to use the Ansys Fluent to simulate a 3D model for a year, and how to speed up became the issue I considered the most in the rest three months. This will be discussed from the perspectives of HPC, CPU selection, I/O performance, and case scaling.
 
 ![The High performance cluster](./assets/img/posts/20240620/HPC_2.webp) <small>The High performance cluster - [Picture Source](https://medium.com/quantonation/a-beginners-guide-to-high-performance-computing-ae70246a7af)</small>
 
