@@ -26,10 +26,7 @@ High-performance computing uses tens of thousands to millions of processors or p
 
  [DTU Computing Center](https://www.hpc.dtu.dk/) manages the cluster and is open to all students and employees [33]. The facility runs on the Linux  system and uses the LSF (Load Sharing Facility) platform to schedule and manage jobs in the task pool. The following code block shows a brief example of calling CPU resources.
  
-```markdown
-<div style="background-color: #f5f5f5; border: 0.5px solid #dcdcdc; padding: 1px; border-radius: 1px; overflow: auto;">
-<pre style="color: black;">
-<code class = "language-sh">
+```sh
 #!/bin/sh
 # embedded options to bsub - start with #BSUB
 # -- Name of the job ---
@@ -57,11 +54,14 @@ High-performance computing uses tens of thousands to millions of processors or p
 # --  -o and -e mean append, -oo and -eo mean overwrite -- 
 #BSUB -oo fluent_local_intel_%J.out
 #BSUB -eo fluent_local_intel_%J.err
-
+```
+```sh
 # Set the environment variable to fix ssh issue
 export SSH_SPAWN=0
 # Set the environment variable to fix IntelMPI issue (fluent v18+)
 export I_MPI_SHM_LMT=shm
+```
+```sh
 #example of ansys command line call
 /appl/ansys/2023R2/v232/fluent/bin/fluent 3ddp -g -t$LSB_DJOB_NUMPROC -i instruction.journal -mpi=intel > fluent_run.out
 </code>
