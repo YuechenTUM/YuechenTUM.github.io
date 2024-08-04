@@ -16,7 +16,7 @@ toc: yes
 
 I recently completed my master's thesis, which focused on the CFD simulation of pit thermal storage. Initially, I collaborated with a Chinese university to develop a dedicated C++ program for fundamental acceleration but ended up using Ansys Fluent to simulate a 3D model for a year for various reasons in the remaining three months. This blog will explore ways to accelerate the simulation through considerations such as employing HPC, CPU selection, I/O performance, and case scaling.
 
-## High performance computing employment
+## High performance computing
 
 ![The High performance cluster](./assets/img/posts/20240620/HPC_2.webp) <small>The High performance cluster - [Picture Source](https://medium.com/quantonation/a-beginners-guide-to-high-performance-computing-ae70246a7af)</small>
 
@@ -24,25 +24,44 @@ High-performance computing uses tens of thousands to millions of processors or p
 
 <tweet>HPC is a technology that uses clusters of powerful processors that work in parallel to process massive, multidimensional data sets and solve complex problems at extremely high speeds.<a href="https://www.ibm.com/topics/hpc">[1]</a></tweet>
 
+ [DTU Computing Center](https://www.hpc.dtu.dk/) manages the cluster and is open to all students and employees [33]. The facility runs on the Linux  system and uses the LSF (Load Sharing Facility) platform to schedule and manage jobs in the task pool. The following code block shows a brief example of calling CPU resources.
 
- [DTU Computing Center](https://www.hpc.dtu.dk/) manages the cluster and is open to all students and employees [^33]. The facility runs on the Linux  system and uses the LSF (Load Sharing Facility) platform to schedule and manage jobs in the task pool. The following code block shows a brief example of calling CPU resources.
-
-
-
-
-
-
-
-
-
-```linux
+```sh
+#!/bin/sh
+# embedded options to bsub - start with #BSUB
+# -- Name of the job ---
+#BSUB -J ansys_FLUENT_example
+# -- specify queue --
 #BSUB -q hpc
-#BSUB -n 32
-#BSUB -R span[ptile=16]
-#BSUB -R "select[model=XeonGold6342]"
-#BSUB -R rusage[mem=4GB]
-#BSUB -W 72:00
-/xxxx/fluent 3ddp -g -t$LSB_DJOB_NUMPROC -i instruction.journal -mpi=intel -cnf=$LSB_DJOB_RANKFILE > console.out
+# -- estimated wall clock time (execution time): hh:mm --
+#BSUB -W 04:00
+### -- specify that we need 2GB of memory per core/slot -- 
+#BSUB -R "rusage[mem=2GB]"
+# -- number of processors/cores/nodes --
+#BSUB -n 4
+### specify that the cores MUST BE on a single host! 
+#BSUB -R "span[hosts=1]"
+# -- user email address --
+# please uncomment the following line and put in your e-mail address,
+# if you want to receive e-mail notifications on a non-default address
+##BSUB -u your_email_address
+# -- mail notification --
+# -- at start --
+#BSUB -B
+# -- at completion --
+#BSUB -N
+# --Specify the output and error file. %J is the job-id --
+# --  -o and -e mean append, -oo and -eo mean overwrite -- 
+#BSUB -oo fluent_local_intel_%J.out
+#BSUB -eo fluent_local_intel_%J.err
+
+# Set the environment variable to fix ssh issue
+export SSH_SPAWN=0
+# Set the environment variable to fix IntelMPI issue (fluent v18+)
+export I_MPI_SHM_LMT=shm
+#example of ansys command line call
+/appl/ansys/2023R2/v232/fluent/bin/fluent 3ddp -g -t$LSB_DJOB_NUMPROC -i instruction.journal -mpi=intel > fluent_run.out
+
 ```
 ## CPU Models and Performance
 
