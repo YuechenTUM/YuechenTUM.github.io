@@ -45,7 +45,7 @@ analytics: G-ZPJLLREE76
 fbadmin: Yuechen Chen
 
 # Paginate
-paginate: 5
+paginate: 6
 paginate_path: 'page:num'
 words_per_minute: 200
 
