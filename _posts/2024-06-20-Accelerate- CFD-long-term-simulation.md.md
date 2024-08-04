@@ -11,7 +11,7 @@ category: opinion
 author: Yueechen
 description: "When using the commercial software Fluent for simulation, in addition to focusing on the results, time cost is also a significant factor. So can long-term CFD transient simulations be accelerated?"
 ---
-Recently, I finished writing my master's thesis. During these six months, time has always bothered me. In the first three months, I actively cooperated with a Chinese university and try to develop a program specifically for pit thermal storage simulation in C++ to fundamentally accelerate the simulation. But for various reasons, I eventually had to use the Ansys Fluent to simulate a 3D model for a year, and how to speed up became the issue I considered the most in the rest three months. This will be discussed from the perspectives of HPC, CPU selection, I/O performance, and case scaling.
+I recently completed my master's thesis, which focused on the CFD simulation of pit thermal storage. Initially, I collaborated with a Chinese university to develop a dedicated C++ program for fundamental acceleration but ended up using Ansys Fluent to simulate a 3D model for a year for various reasons in the remaining three months. This blog will explore ways to accelerate the simulation through considerations such as employing HPC, CPU selection, I/O performance, and case scaling.
 
 ![The High performance cluster](./assets/img/posts/20240620/HPC_2.webp) <small>The High performance cluster - [Picture Source](https://medium.com/quantonation/a-beginners-guide-to-high-performance-computing-ae70246a7af)</small>
 
@@ -26,15 +26,15 @@ First of all, high performance computing has to be utlized, because it has becom
 #BSUB -W 72:00
 /xxxx/fluent 3ddp -g -t$LSB_DJOB_NUMPROC -i instruction.journal -mpi=intel -cnf=$LSB_DJOB_RANKFILE > console.out
 ```
-### CPU Models and Performance
+## CPU Models and Performance
 
 DCC provides a range of CPU models to choose from. According to an Ansys white paper, Fluent generally benefits more from higher memory capacity and bandwidth than from higher core counts and frequencies [35]. The results show that the cpu XeonGold 6342 exhibits the fastest performance, with an average per-iteration time that is approximately 20.33% faster than the cpu XeonGold 6126. In addition, communication throughput is critical for large clusters, especially when dealing with transient models. In addition, I/O performance plays a crucial role. However, students often lack direct access to monitor system I/O activity, which makes it challenging to evaluate the performance of I/O performance. Through a rough test, the model with a reporting interval of 600 seconds takes approximately 28.65% longer than the model without reporting output. And The total wall clock time with a reporting output interval of 1200 seconds is comparable to the wall clock time without any output.
 
-### Parallel Computing and Scalability
+## Parallel Computing and Scalability
 
 Additionally, when performing parallel computing in high-performance computing, scale testing with different settings for each case is essential. In general, it is widely believed that using more threads will reduce the total wall clock time. However, increasing the number of threads does not always improve efficiency. Even on a single host, there is a critical threshold: beyond a certain number of threads, the speedup effect stagnates or even decreases. This is because the overhead of information exchange between threads increases, and the more threads, the greater the overhead, which offsets the benefits of parallelism. In the case of using distributed memory technology, multiple nodes are used, resulting in greater communication overhead. The benefits can only be obtained when the model scale is large enough to require the use of distributed storage technology; otherwise, the increased communication overhead will extend the total wall clock time.
 
-### Fluent version
+## Fluent version
 
 The impact of different versions of Ansys Fluent on computational efficiency needs to be considered. As Ansys continues to develop and optimize the underlying code, the computational speed is expected to increase in theory. Three Fluent versions, 202R1, 2021R1, and 2022R1, were tested. Versions 2023 and 2024 have undergone major changes, so these two versions were not tested. In the tests of these three versions, in addition to testing single-threaded serial calculations, 2 or 4-thread parallel calculations were also tested. Taking 34,542 cells as an example, the whole day of June 16, 2017 was calculated with a time step of 10 seconds. In serial calculation, the speed of 2021R1 version decreased by 7.479% compared with 2020R1 version, while the speed of 2022R1 version decreased by 10.20%. In four-thread parallel calculation, the speed of 2021R1 version decreased by 7.94% compared with 2020R1 version, and the speed of 2022R1 version decreased by 7.597% compared with 2020R1 version.
 
