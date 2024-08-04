@@ -13,11 +13,18 @@ description: "When using the commercial software Fluent for simulation, in addit
 ---
 Recently, I finished writing my master's thesis. During these six months, time has always been an important factor that bothered me. In the first three months, I actively cooperated with a Chinese university to try to develop a program specifically for pit thermal storage simulation in C++ to fundamentally accelerate the simulation and phase in the development of the information exchange code for the universal grid of the two-dimensional interface. But for various reasons, I eventually had to use the commercial software Ansys Fluent to simulate a three-dimensional model for a year, and how to speed up became the issue I considered the most in the rest three months.
 
-First of all, HPC (high performance computing) has to be utlized, because it has become a necessary method to ensure computing efficiency and stability when performing heavy numerical computing tasks. DDC (DTU Computing Center) manages the HPC cluster and is open to all students and employees [33]. The facility runs on the Linux  system and uses the LSF (Load Sharing Facility) platform to schedule and manage jobs in the cluster.
+First of all, HPC (high performance computing) has to be utlized, because it has become a necessary method to ensure computing efficiency and stability when performing heavy numerical computing tasks. ([DTU Computing Center].https://www.hpc.dtu.dk/). manages the HPC cluster and is open to all students and employees [^33]. The facility runs on the Linux  system and uses the LSF (Load Sharing Facility) platform to schedule and manage jobs in the cluster. The following code block shows a brief example of calling CPU resources.
 
 ```bash
-/appl/ansys/2020R1/v201/fluent/bin/fluent 3ddp -g -t$LSB_DJOB_NUMPROC -i instruction.journal -mpi=intel -cnf=$LSB_DJOB_RANKFILE > console.out
+#BSUB -q hpc
+#BSUB -n 32
+#BSUB -R span[ptile=16]
+#BSUB -R "select[model=XeonGold6342]"
+#BSUB -R rusage[mem=4GB]
+#BSUB -W 72:00
+/xxxx/fluent 3ddp -g -t$LSB_DJOB_NUMPROC -i instruction.journal -mpi=intel -cnf=$LSB_DJOB_RANKFILE > console.out
 ```
+
 The project was created by [Over the Bridge](https://overthebridge.org), an organization dedicated to increase awareness on mental health and substance abuse in the music industry, trying to denormalize and remove the glamour around such illnesses within the music community.
 
 They are using Google's [Magenta](https://magenta.tensorflow.org), which is a neural network that precisely was conceived to explore the role of machine learning within the creative process. Magenta has been used to create a brand new "Beatles" song or even there was a band that [used it to write a full album](https://arstechnica.com/gaming/2019/08/yachts-chain-tripping-is-a-new-landmark-for-ai-music-an-album-that-doesnt-suck/) in 2019.
