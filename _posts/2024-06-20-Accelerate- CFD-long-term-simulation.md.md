@@ -57,7 +57,7 @@ It is also possible to use distributed storage to place tasks on different compu
 
 ## CPU Models and I/O Performance
 
-DTU Computing Center provides a range of CPU models to choose from. According to an Ansys [White paper]([https://www.hpc.dtu.dk/](https://www.ansys.com/resource-center/white-paper/how-to-select-the-best-processor-and-hpc-system-for-your-ansys-workloads)) , Fluent generally benefits more from higher memory capacity and bandwidth than from higher core counts and frequencies [35]. The results show that the cpu XeonGold 6342 exhibits the fastest performance, with an average per-iteration time that is approximately 20.33% faster than the cpu XeonGold 6126. 
+DTU Computing Center provides a range of CPU models to choose from. According to an Ansys [White paper](https://www.ansys.com/resource-center/white-paper/how-to-select-the-best-processor-and-hpc-system-for-your-ansys-workloads), Fluent generally benefits more from higher memory capacity and bandwidth than from higher core counts and frequencies [35]. The results show that the cpu XeonGold 6342 exhibits the fastest performance, with an average per-iteration time that is approximately 20.33% faster than the cpu XeonGold 6126. 
 
 ![CPU diagram](./assets/img/posts/20240620/CPU.jpg) <small>The CPU diagram - [Picture Source](https://greenluffa.com/jp/intel-%E7%AC%AC-12-%E4%B8%96%E4%BB%A3-alder-lake-cpu-%E3%81%AE%E3%82%BD%E3%83%BC%E3%82%B9-%E3%82%B3%E3%83%BC%E3%83%89%E3%81%8C%E3%83%8F%E3%83%83%E3%82%AD%E3%83%B3%E3%82%B0%E5%BE%8C%E3%81%AB%E6%B5%81/)</small>
 
