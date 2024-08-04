@@ -71,10 +71,7 @@ At the same time, it is necessary to consider the impact of different versions o
 
 Additionally, when performing parallel computing in high-performance computing, scale testing with different settings for each case is essential. In general, it is widely believed that using more threads will reduce the total wall clock time. However, increasing the number of threads does not always improve efficiency. Even on a single host, there is a critical threshold: beyond a certain number of threads, the speedup effect stagnates or even decreases. 
 
-<div style="display: flex; justify-content: space-around;">
-  <img src="/assets/img/posts/20240620/Gen_DSpeedupDN_amdahl.png" alt="Gen DSpeedupDN Amdahl" style="width: 50%;">
-  <img src="/assets/img/posts/20240620/Gen_Speedup_amdahl.png" alt="Gen Speedup Amdahl" style="width: 50%;">
-</div>
+![Theoretical Derivative of the Speedup, according to Amdahl’s law, for different values of the parallel fraction.](./assets/img/posts/20240620/Gen_Speedup_amdahl.png) <small>Theoretical Derivative of the Speedup, according to Amdahl’s law, for different values of the parallel fraction. - [Picture Source](https://www.hpc.dtu.dk/?page_id=1663)</small>
 
 This is because the overhead of information exchange between threads increases, and the more threads, the greater the overhead, which offsets the benefits of parallelism. In the case of using distributed memory technology, multiple nodes are used, resulting in greater communication overhead. The benefits can only be obtained when the model scale is large enough to require the use of distributed storage technology; otherwise, the increased communication overhead will extend the total wall clock time.
 
