@@ -19,7 +19,7 @@ I recently completed my master's thesis, which focused on the CFD simulation of 
 ## High performance computing
 
 <div style="text-align: center;">
-  <img src="./assets/img/posts/20240620/HPC_2.webp" alt="The High performance cluster" style="width: 60%;">
+  <img src="./assets/img/posts/20240620/HPC_2.webp" alt="The High performance cluster" style="width: 85%;">
   <p><small>The High performance cluster - <a href="https://medium.com/quantonation/a-beginners-guide-to-high-performance-computing-ae70246a7af">Picture Source</a></small></p>
 </div>
 
@@ -63,7 +63,7 @@ It is also possible to use distributed storage to place tasks on different compu
 DTU Computing Center provides a range of CPU models to choose from. According to an Ansys [White paper](https://www.ansys.com/resource-center/white-paper/how-to-select-the-best-processor-and-hpc-system-for-your-ansys-workloads), Fluent generally benefits more from higher memory capacity and bandwidth than from higher core counts and frequencies [35]. The results show that the cpu XeonGold 6342 exhibits the fastest performance, with an average per-iteration time that is approximately 20.33% faster than the cpu XeonGold 6126. 
 
 <div style="text-align: center;">
-  <img src="./assets/img/posts/20240620/CPU.jpg" alt="CPU diagram" style="width: 60%;">
+  <img src="./assets/img/posts/20240620/CPU.jpg" alt="CPU diagram" style="width: 85%;">
   <p><small>The CPU diagram - <a href="https://greenluffa.com/jp/intel-%E7%AC%AC-12-%E4%B8%96%E4%BB%A3-alder-lake-cpu-%E3%81%AE%E3%82%BD%E3%83%BC%E3%82%B9-%E3%82%B3%E3%83%BC%E3%83%89%E3%81%8C%E3%83%8F%E3%83%83%E3%82%AD%E3%83%B3%E3%82%B0%E5%BE%8C%E3%81%AB%E6%B5%81/">Picture Source</a></small></p>
 </div>
 
@@ -78,7 +78,7 @@ At the same time, it is necessary to consider the impact of different versions o
 Additionally, when performing parallel computing in high-performance computing, scale testing with different settings for each case is essential. In general, it is widely believed that using more threads will reduce the total wall clock time. However, increasing the number of threads does not always improve efficiency. Even on a single host, there is a critical threshold: beyond a certain number of threads, the speedup effect stagnates or even decreases. 
 
 <div style="text-align: center;">
-  <img src="./assets/img/posts/20240620/Gen_Speedup_amdahl.png" alt="Theoretical Derivative of the Speedup, according to Amdahl’s law, for different values of the parallel fraction." style="width: 50%;">
+  <img src="./assets/img/posts/20240620/Gen_Speedup_amdahl.png" alt="Theoretical Derivative of the Speedup, according to Amdahl’s law, for different values of the parallel fraction." style="width: 85%;">
   <p><small>Theoretical Derivative of the Speedup, according to Amdahl’s law, for different values of the parallel fraction. - <a href="https://www.hpc.dtu.dk/?page_id=1663">Picture Source</a></small></p>
 </div>
 
