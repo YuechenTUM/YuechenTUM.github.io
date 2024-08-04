@@ -57,7 +57,11 @@ It is also possible to use distributed storage to place tasks on different compu
 
 ## CPU Models and Performance
 
-DCC provides a range of CPU models to choose from. According to an Ansys white paper, Fluent generally benefits more from higher memory capacity and bandwidth than from higher core counts and frequencies [35]. The results show that the cpu XeonGold 6342 exhibits the fastest performance, with an average per-iteration time that is approximately 20.33% faster than the cpu XeonGold 6126. In addition, communication throughput is critical for large clusters, especially when dealing with transient models. In addition, I/O performance plays a crucial role. However, students often lack direct access to monitor system I/O activity, which makes it challenging to evaluate the performance of I/O performance. Through a rough test, the model with a reporting interval of 600 seconds takes approximately 28.65% longer than the model without reporting output. And The total wall clock time with a reporting output interval of 1200 seconds is comparable to the wall clock time without any output.
+DCC provides a range of CPU models to choose from. According to an Ansys white paper, Fluent generally benefits more from higher memory capacity and bandwidth than from higher core counts and frequencies [35]. The results show that the cpu XeonGold 6342 exhibits the fastest performance, with an average per-iteration time that is approximately 20.33% faster than the cpu XeonGold 6126. 
+
+![CPU diagram](./assets/img/posts/20240620/CPU.jpg) <small>The High performance cluster - [Picture Source](https://greenluffa.com/jp/intel-%E7%AC%AC-12-%E4%B8%96%E4%BB%A3-alder-lake-cpu-%E3%81%AE%E3%82%BD%E3%83%BC%E3%82%B9-%E3%82%B3%E3%83%BC%E3%83%89%E3%81%8C%E3%83%8F%E3%83%83%E3%82%AD%E3%83%B3%E3%82%B0%E5%BE%8C%E3%81%AB%E6%B5%81/)</small>
+
+In addition, communication throughput is critical for large clusters, especially when dealing with transient models. In addition, I/O performance plays a crucial role. However, students often lack direct access to monitor system I/O activity, which makes it challenging to evaluate the performance of I/O performance. Through a rough test, the model with a reporting interval of 600 seconds takes approximately 28.65% longer than the model without reporting output. And The total wall clock time with a reporting output interval of 1200 seconds is comparable to the wall clock time without any output.
 
 ## Parallel Computing and Scalability
 
