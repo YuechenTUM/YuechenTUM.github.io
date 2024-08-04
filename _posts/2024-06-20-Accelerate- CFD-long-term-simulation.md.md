@@ -16,14 +16,14 @@ toc: yes
 
 I recently completed my master's thesis, which focused on the CFD simulation of pit thermal storage. Initially, I collaborated with a Chinese university to develop a dedicated C++ program for fundamental acceleration but ended up using Ansys Fluent to simulate a 3D model for a year for various reasons in the remaining three months. This blog will explore ways to accelerate the simulation through considerations such as employing HPC, CPU selection, I/O performance, and case scaling.
 
-## High performance computing
+## High-performance computing
 
 <div style="text-align: center;">
   <img src="./assets/img/posts/20240620/HPC_2.webp" alt="The High performance cluster" style="width: 85%;">
   <p><small>The High performance cluster - <a href="https://medium.com/quantonation/a-beginners-guide-to-high-performance-computing-ae70246a7af">Picture Source</a></small></p>
 </div>
 
-High-performance computing uses tens of thousands to millions of processors or processor cores for parallel computing, which has the advantages of being more stable when performing heavy numerical computing tasks, and its running speed is usually much faster than the fastest laptop or server system.
+High-performance computing uses tens of thousands to millions of processors or processor cores for parallel computing, which has the advantage of being more stable when performing heavy numerical computing tasks, and its running speed is usually much faster than the fastest laptop or server system.
 
 <tweet>HPC is a technology that uses clusters of powerful processors that work in parallel to process massive, multidimensional data sets and solve complex problems at extremely high speeds.<a href="https://www.ibm.com/topics/hpc">[1]</a></tweet>
 
@@ -71,14 +71,14 @@ In addition, communication throughput is critical for large clusters, especially
 
 ## Fluent version
 
-At the same time, it is necessary to consider the impact of different versions of Ansys Fluent on computing efficiency. As Ansys continues to develop and optimize the underlying code, the computing speed is expected to increase in theory. Three Fluent versions, 202R1, 2021R1, and 2022R1, were tested. Versions 2023 and 2024 have undergone major changes, so these two versions were not tested. In the tests of these three versions in the same environment, in addition to testing single-thread serial computing, 2 or 4-thread parallel computing was also tested. In serial computing, the 2021R1 version was 7.479% slower than the 2020R1 version unexpected, and the 2022R1 version was 10.20% slower. In four-thread parallel computing, the 2021R1 version was 7.94% slower than the 2020R1 version, and the 2022R1 version was 7.597% slower than the 2020R1 version.
+At the same time, it is necessary to consider the impact of different versions of Ansys Fluent on computing efficiency. As Ansys continues to develop and optimize the underlying code, the computing speed is expected to increase in theory. Three Fluent versions, 202R1, 2021R1, and 2022R1, were tested. Versions 2023 and 2024 have undergone major changes, so these two versions were not tested. In the tests of these three versions in the same environment, in addition to testing single-thread serial computing, 2 or 4-thread parallel computing was also tested. In serial computing, the 2021R1 version was 7.479% slower than the 2020R1 version unexpectedly, and the 2022R1 version was 10.20% slower. In four-thread parallel computing, the 2021R1 version was 7.94% slower than the 2020R1 version, and the 2022R1 version was 7.597% slower than the 2020R1 version.
 
 ## Scaling
 
 Additionally, when performing parallel computing in high-performance computing, scale testing with different settings for each case is essential. In general, it is widely believed that using more threads will reduce the total wall clock time. However, increasing the number of threads does not always improve efficiency. Even on a single host, there is a critical threshold: beyond a certain number of threads, the speedup effect stagnates or even decreases. 
 
 <div style="text-align: center;">
-  <img src="./assets/img/posts/20240620/Gen_Speedup_amdahl.png" alt="Theoretical Derivative of the Speedup, according to Amdahl’s law, for different values of the parallel fraction." style="width: 80%;">
+  <img src="./assets/img/posts/20240620/Gen_Speedup_amdahl.png" alt=" Theoretical Derivative of the Speedup, according to Amdahl’s law, for different values of the parallel fraction." style="width: 75%;">
   <p><small>Theoretical Derivative of the Speedup, according to Amdahl’s law, for different values of the parallel fraction. - <a href="https://www.hpc.dtu.dk/?page_id=1663">Picture Source</a></small></p>
 </div>
 
