@@ -13,6 +13,8 @@ description: "When using the commercial software Fluent for simulation, in addit
 ---
 Recently, I finished writing my master's thesis. During these six months, time has always been an important factor that bothered me. In the first three months, I actively cooperated with a Chinese university to try to develop a program specifically for pit thermal storage simulation in C++ to fundamentally accelerate the simulation and phase in the development of the information exchange code for the universal grid of the two-dimensional interface. But for various reasons, I eventually had to use the commercial software Ansys Fluent to simulate a three-dimensional model for a year, and how to speed up became the issue I considered the most in the rest three months.
 
+![The High performance cluster](./assets/img/posts/20240620/HPC.jpg) <small>The High performance cluster - [Source](https://irt.rowan.edu/service-catalog/hardware/hpc/)</small>
+
 First of all, high performance computing has to be utlized, because it has become a necessary method to ensure computing efficiency and stability when performing heavy numerical computing tasks. [DTU Computing Center](https://www.hpc.dtu.dk/) manages the cluster and is open to all students and employees [^33]. The facility runs on the Linux  system and uses the LSF (Load Sharing Facility) platform to schedule and manage jobs in the cluster. The following code block shows a brief example of calling CPU resources.
 
 ```linux
