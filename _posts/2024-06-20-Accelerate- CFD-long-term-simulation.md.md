@@ -73,12 +73,12 @@ In addition, communication throughput is critical for large clusters, especially
 
 At the same time, it is necessary to consider the impact of different versions of Ansys Fluent on computing efficiency. As Ansys continues to develop and optimize the underlying code, the computing speed is expected to increase in theory. Three Fluent versions, 202R1, 2021R1, and 2022R1, were tested. Versions 2023 and 2024 have undergone major changes, so these two versions were not tested. In the tests of these three versions in the same environment, in addition to testing single-thread serial computing, 2 or 4-thread parallel computing was also tested. In serial computing, the 2021R1 version was 7.479% slower than the 2020R1 version unexpected, and the 2022R1 version was 10.20% slower. In four-thread parallel computing, the 2021R1 version was 7.94% slower than the 2020R1 version, and the 2022R1 version was 7.597% slower than the 2020R1 version.
 
-## Parallel Computing and Scalability
+## Scaling
 
 Additionally, when performing parallel computing in high-performance computing, scale testing with different settings for each case is essential. In general, it is widely believed that using more threads will reduce the total wall clock time. However, increasing the number of threads does not always improve efficiency. Even on a single host, there is a critical threshold: beyond a certain number of threads, the speedup effect stagnates or even decreases. 
 
 <div style="text-align: center;">
-  <img src="./assets/img/posts/20240620/Gen_Speedup_amdahl.png" alt="Theoretical Derivative of the Speedup, according to Amdahl’s law, for different values of the parallel fraction." style="width: 85%;">
+  <img src="./assets/img/posts/20240620/Gen_Speedup_amdahl.png" alt="Theoretical Derivative of the Speedup, according to Amdahl’s law, for different values of the parallel fraction." style="width: 80%;">
   <p><small>Theoretical Derivative of the Speedup, according to Amdahl’s law, for different values of the parallel fraction. - <a href="https://www.hpc.dtu.dk/?page_id=1663">Picture Source</a></small></p>
 </div>
 
