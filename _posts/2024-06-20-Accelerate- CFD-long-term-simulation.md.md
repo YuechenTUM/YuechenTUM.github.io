@@ -25,9 +25,9 @@ High-performance computing uses tens of thousands to millions of processors or p
 <tweet>HPC is a technology that uses clusters of powerful processors that work in parallel to process massive, multidimensional data sets and solve complex problems at extremely high speeds.<a href="https://www.ibm.com/topics/hpc">[1]</a></tweet>
 
  [DTU Computing Center](https://www.hpc.dtu.dk/) manages the cluster and is open to all students and employees [33]. The facility runs on the Linux  system and uses the LSF (Load Sharing Facility) platform to schedule and manage jobs in the task pool. The following code block shows a brief example of calling CPU resources.
-
-<div style="background-color: #f5f5f5; border: 1px solid #dcdcdc; padding: 10px; border-radius: 5px; overflow: auto;">
-<pre>
+```sh
+<div style="background-color: #f5f5f5; border: 0.5px solid #dcdcdc; padding: 1px; border-radius: 1px; overflow: auto;">
+<pre style="color: black;">
 <code>
 #!/bin/sh
 # embedded options to bsub - start with #BSUB
@@ -66,7 +66,7 @@ export I_MPI_SHM_LMT=shm
 </code>
 </pre>
 </div>
-
+```
 ## CPU Models and Performance
 
 DCC provides a range of CPU models to choose from. According to an Ansys white paper, Fluent generally benefits more from higher memory capacity and bandwidth than from higher core counts and frequencies [35]. The results show that the cpu XeonGold 6342 exhibits the fastest performance, with an average per-iteration time that is approximately 20.33% faster than the cpu XeonGold 6126. In addition, communication throughput is critical for large clusters, especially when dealing with transient models. In addition, I/O performance plays a crucial role. However, students often lack direct access to monitor system I/O activity, which makes it challenging to evaluate the performance of I/O performance. Through a rough test, the model with a reporting interval of 600 seconds takes approximately 28.65% longer than the model without reporting output. And The total wall clock time with a reporting output interval of 1200 seconds is comparable to the wall clock time without any output.
