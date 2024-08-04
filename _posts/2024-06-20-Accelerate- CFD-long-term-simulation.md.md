@@ -24,47 +24,29 @@ High-performance computing uses tens of thousands to millions of processors or p
 
 <tweet>HPC is a technology that uses clusters of powerful processors that work in parallel to process massive, multidimensional data sets and solve complex problems at extremely high speeds.<a href="https://www.ibm.com/topics/hpc">[1]</a></tweet>
 
- [DTU Computing Center](https://www.hpc.dtu.dk/) manages the cluster and is open to all students and employees [33]. The facility runs on the Linux  system and uses the LSF (Load Sharing Facility) platform to schedule and manage jobs in the task pool. The following code block shows a brief example of calling CPU resources.
+ [DTU Computing Center](https://www.hpc.dtu.dk/) manages the cluster and is open to all students and employees [33]. The facility runs on the Linux  system and uses the LSF (Load Sharing Facility) platform to schedule and manage jobs in the task pool. The following code blocks show brief example of calling CPU resources only.
  
 ```bash
 #!/bin/sh
 # embedded options to bsub - start with #BSUB
-# -- Name of the job ---
-#BSUB -J ansys_FLUENT_example
-# -- specify queue --
+#BSUB -J Ansys_FLUENT_case
 #BSUB -q hpc
-# -- estimated wall clock time (execution time): hh:mm --
-#BSUB -W 04:00
-### -- specify that we need 2GB of memory per core/slot -- 
+#BSUB -W 12:00
 #BSUB -R "rusage[mem=2GB]"
-# -- number of processors/cores/nodes --
 #BSUB -n 4
-### specify that the cores MUST BE on a single host! 
 #BSUB -R "span[hosts=1]"
-# -- user email address --
-# please uncomment the following line and put in your e-mail address,
-# if you want to receive e-mail notifications on a non-default address
-##BSUB -u your_email_address
-# -- mail notification --
-# -- at start --
-#BSUB -B
-# -- at completion --
-#BSUB -N
-# --Specify the output and error file. %J is the job-id --
-# --  -o and -e mean append, -oo and -eo mean overwrite -- 
-#BSUB -oo fluent_local_intel_%J.out
-#BSUB -eo fluent_local_intel_%J.err
 ```
+Resource arrangment
 ```sh
-# Set the environment variable to fix ssh issue
 export SSH_SPAWN=0
-# Set the environment variable to fix IntelMPI issue (fluent v18+)
 export I_MPI_SHM_LMT=shm
 ```
+Environments set
 ```sh
-#example of ansys command line call
 /appl/ansys/2023R2/v232/fluent/bin/fluent 3ddp -g -t$LSB_DJOB_NUMPROC -i instruction.journal -mpi=intel > fluent_run.out
 ```
+Call Fluent with specific version and run with journal file.
+
 ## CPU Models and Performance
 
 DCC provides a range of CPU models to choose from. According to an Ansys white paper, Fluent generally benefits more from higher memory capacity and bandwidth than from higher core counts and frequencies [35]. The results show that the cpu XeonGold 6342 exhibits the fastest performance, with an average per-iteration time that is approximately 20.33% faster than the cpu XeonGold 6126. In addition, communication throughput is critical for large clusters, especially when dealing with transient models. In addition, I/O performance plays a crucial role. However, students often lack direct access to monitor system I/O activity, which makes it challenging to evaluate the performance of I/O performance. Through a rough test, the model with a reporting interval of 600 seconds takes approximately 28.65% longer than the model without reporting output. And The total wall clock time with a reporting output interval of 1200 seconds is comparable to the wall clock time without any output.
