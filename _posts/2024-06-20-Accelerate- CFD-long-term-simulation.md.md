@@ -25,10 +25,11 @@ High-performance computing uses tens of thousands to millions of processors or p
 <tweet>HPC is a technology that uses clusters of powerful processors that work in parallel to process massive, multidimensional data sets and solve complex problems at extremely high speeds.<a href="https://www.ibm.com/topics/hpc">[1]</a></tweet>
 
  [DTU Computing Center](https://www.hpc.dtu.dk/) manages the cluster and is open to all students and employees [33]. The facility runs on the Linux  system and uses the LSF (Load Sharing Facility) platform to schedule and manage jobs in the task pool. The following code block shows a brief example of calling CPU resources.
-```sh
+ 
+```markdown
 <div style="background-color: #f5f5f5; border: 0.5px solid #dcdcdc; padding: 1px; border-radius: 1px; overflow: auto;">
 <pre style="color: black;">
-<code>
+<code class = "language-sh">
 #!/bin/sh
 # embedded options to bsub - start with #BSUB
 # -- Name of the job ---
