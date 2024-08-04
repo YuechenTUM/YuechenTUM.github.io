@@ -18,15 +18,19 @@ I recently completed my master's thesis, which focused on the CFD simulation of 
 
 ## High performance computing employment
 
-First of all, high performance computing has to be utlized, because it has become a necessary method to ensure computing efficiency and stability when performing heavy numerical computing tasks. [DTU Computing Center](https://www.hpc.dtu.dk/) manages the cluster and is open to all students and employees [^33]. The facility runs on the Linux  system and uses the LSF (Load Sharing Facility) platform to schedule and manage jobs in the cluster. The following code block shows a brief example of calling CPU resources.
+![The High performance cluster](./assets/img/posts/20240620/HPC_2.webp) <small>The High performance cluster - [Picture Source](https://medium.com/quantonation/a-beginners-guide-to-high-performance-computing-ae70246a7af)</small>
+
+High-performance computing uses tens of thousands to millions of processors or processor cores for parallel computing, which has the advantages of being more stable and efficient when performing heavy numerical computing tasks, and its running speed is usually much faster than the fastest laptop or server system.
 
 <tweet>HPC is a technology that uses clusters of powerful processors that work in parallel to process massive, multidimensional data sets and solve complex problems at extremely high speeds.[1](https://www.ibm.com/topics/hpc)</tweet>
 
+ [DTU Computing Center](https://www.hpc.dtu.dk/) manages the cluster and is open to all students and employees [^33]. The facility runs on the Linux  system and uses the LSF (Load Sharing Facility) platform to schedule and manage jobs in the cluster. The following code block shows a brief example of calling CPU resources.
 
 
 
 
-![The High performance cluster](./assets/img/posts/20240620/HPC_2.webp) <small>The High performance cluster - [Picture Source](https://medium.com/quantonation/a-beginners-guide-to-high-performance-computing-ae70246a7af)</small>
+
+
 
 
 
