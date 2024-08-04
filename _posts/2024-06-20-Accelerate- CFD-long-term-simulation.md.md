@@ -10,6 +10,7 @@ tags: [CFD, High-performance cluster, Ansys fluent, 3D model]
 category: opinion
 author: Yueechen
 description: "When using the commercial software Fluent for simulation, in addition to focusing on the results, time cost is also a significant factor. So can long-term CFD transient simulations be accelerated?"
+toc: yes
 ---
 I recently completed my master's thesis, which focused on the CFD simulation of pit thermal storage. Initially, I collaborated with a Chinese university to develop a dedicated C++ program for fundamental acceleration but ended up using Ansys Fluent to simulate a 3D model for a year for various reasons in the remaining three months. This blog will explore ways to accelerate the simulation through considerations such as employing HPC, CPU selection, I/O performance, and case scaling.
 
