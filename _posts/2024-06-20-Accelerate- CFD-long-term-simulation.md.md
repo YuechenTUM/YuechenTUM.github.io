@@ -11,7 +11,7 @@ category: opinion
 author: Yueechen
 description: "When using the commercial software Fluent for simulation, in addition to focusing on the results, time cost is also a significant factor. So can long-term CFD transient simulations be accelerated?"
 ---
-Recently, I finished writing my master's thesis. During these six months, time has always been an important factor that bothered me. In the first three months, I actively cooperated with a Chinese university and try to develop a program specifically for pit thermal storage simulation in C++ to fundamentally accelerate the simulation. But for various reasons, I eventually had to use the Ansys Fluent to simulate a 3D model for a year, and how to speed up became the issue I considered the most in the rest three months. This will be discussed from the perspectives of HPC, CPU selection, I/O performance, and case scaling.
+Recently, I finished writing my master's thesis. During these six months, time has always bothered me. In the first three months, I actively cooperated with a Chinese university and try to develop a program specifically for pit thermal storage simulation in C++ to fundamentally accelerate the simulation. But for various reasons, I eventually had to use the Ansys Fluent to simulate a 3D model for a year, and how to speed up became the issue I considered the most in the rest three months. This will be discussed from the perspectives of HPC, CPU selection, I/O performance, and case scaling.
 
 ![The High performance cluster](./assets/img/posts/20240620/HPC_2.webp) <small>The High performance cluster - [Picture Source](https://medium.com/quantonation/a-beginners-guide-to-high-performance-computing-ae70246a7af)</small>
 
