@@ -20,7 +20,7 @@ I recently completed my master's thesis, which focused on the CFD simulation of 
 
 ![The High performance cluster](./assets/img/posts/20240620/HPC_2.webp) <small>The High performance cluster - [Picture Source](https://medium.com/quantonation/a-beginners-guide-to-high-performance-computing-ae70246a7af)</small>
 
-High-performance computing uses tens of thousands to millions of processors or processor cores for parallel computing, which has the advantages of being more stable and efficient when performing heavy numerical computing tasks, and its running speed is usually much faster than the fastest laptop or server system.
+High-performance computing uses tens of thousands to millions of processors or processor cores for parallel computing, which has the advantages of being more stable when performing heavy numerical computing tasks, and its running speed is usually much faster than the fastest laptop or server system.
 
 <tweet>HPC is a technology that uses clusters of powerful processors that work in parallel to process massive, multidimensional data sets and solve complex problems at extremely high speeds.<a href="https://www.ibm.com/topics/hpc">[1]</a></tweet>
 
@@ -29,23 +29,14 @@ High-performance computing uses tens of thousands to millions of processors or p
 ```bash
 #!/bin/sh
 # embedded options to bsub - start with #BSUB
-# -- Name of the job ---
-#BSUB -J Ansys_FLUENT_Case
-# -- specify queue --
+#BSUB -J Ansys_FLUENT_Case 
 #BSUB -q hpc
-# -- estimated wall clock time (execution time): hh:mm --
 #BSUB -W 04:00
-### -- specify that we need 2GB of memory per core/slot -- 
 #BSUB -R "rusage[mem=2GB]"
-# -- number of processors/cores/nodes --
 #BSUB -n 4
-### specify that the cores MUST BE on a single host! 
 #BSUB -R "span[hosts=1]"
 # -- user email address --
-# please uncomment the following line and put in your e-mail address,
-# if you want to receive e-mail notifications on a non-default address
 ##BSUB -u your_email_address
-# -- mail notification --
 # -- at start --
 #BSUB -B
 # -- at completion --
@@ -62,6 +53,7 @@ export I_MPI_SHM_LMT=shm
 #example of ansys command line call
 /appl/ansys/2023R2/v232/fluent/bin/fluent 3ddp -g -t$LSB_DJOB_NUMPROC -i instruction.journal -mpi=intel > fluent_run.out
 ```
+It is also possible to use distributed storage to place tasks on different computing nodes and use GPU resources for computing. Make the corresponding modifications to the above script.
 
 ## CPU Models and Performance
 
