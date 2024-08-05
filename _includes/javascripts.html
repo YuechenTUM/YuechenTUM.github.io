@@ -1,12 +1,7 @@
 {% include calculate_relative_base.html %}
 {% include escape-404.html %}
 
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-
 <!-- JS -->
-
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 {% capture logo_url %}{{ relativebase }}{{ site.logo  }}{% endcapture %}
 {% assign logo_url = logo_url | replace: "//", "/" %}
