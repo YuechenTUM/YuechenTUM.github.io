@@ -1,12 +1,6 @@
 {% include calculate_relative_base.html %}
 {% include escape-404.html %}
 
-<!-- 引入Slick滑块库 -->
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
 <!-- JS -->
 
 {% capture logo_url %}{{ relativebase }}{{ site.logo  }}{% endcapture %}
@@ -352,17 +346,4 @@
       window.mermaid.init(undefined, document.querySelectorAll('pre code.language-mermaid'));
     })()
   </script>
-<script>
-  $(document).ready(function(){
-    $('.recent-posts-slider').slick({
-      infinite: true,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 2000,
-      dots: true,
-      arrows: true
-    });
-  });
-</script>
 {%- endif -%}
