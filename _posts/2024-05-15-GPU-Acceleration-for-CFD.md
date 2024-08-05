@@ -4,7 +4,7 @@ read_time: true
 show_date: true
 title: GPU accleration for CFD
 date: 2024-05-15
-img: posts/2024-05-15/fluent-cfd-car.webp
+img: posts/2024-05-15/img_344654_1.png
 img_caption: "Photo by Bent Bach"
 tags: [CFD, GPU, Ansys fluent, 3D model]
 category: opinion
