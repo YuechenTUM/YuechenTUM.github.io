@@ -4,9 +4,9 @@ read_time: true
 show_date: true
 title: GPU accleration for CFD
 date: 2024-05-15
-img: posts/20240620/HPC.jpg
+img: posts/2024-05-15/fluent-cfd-car.webp
 img_caption: "Photo by Bent Bach"
-tags: [CFD, High-performance computing, Ansys fluent, 3D model]
+tags: [CFD, GPU, Ansys fluent, 3D model]
 category: opinion
 author: Yueechen
 description: "When using the commercial software Fluent for simulation, in addition to focusing on the results, time cost is also a significant factor. So can long-term CFD transient simulations be accelerated?"
