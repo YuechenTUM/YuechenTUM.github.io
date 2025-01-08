@@ -593,6 +593,12 @@ svg {
   font-weight: var(--font2-light);
   color: var(--accent-dark);
 }
+.main-header .wrapper {
+  width: 400px; /* 仅修改 header 的宽度 */
+  max-width: 90%;
+  margin: 0.75em auto 0.75em;
+  position: relative;
+}
 .main-nav {
   position: fixed;
   top: 0;
