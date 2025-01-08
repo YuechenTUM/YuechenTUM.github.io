@@ -12,7 +12,10 @@ instagram:
 ---
 <p>Sisimiut translates from Greenlandic as "those who live by the fox's hole",[5] and its previous Danish name was Holsteinburg, named after the Danish Count Johan Ludwig Holstein. It is located approximately 320 km north of Nuuk and about 75 km north of the Arctic Circle,[16] on the eastern side of the Davis Strait.</p>
 
-<img src="./assets/img/posts/Sisimiut/Apisseq.jpg"/><small>Tandy Color Computer TRS80 III</small>
+<div style="width: 300px; border: 10px solid white; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); overflow: hidden;">
+    <img src="./assets/img/posts/Sisimiut/Apisseq.jpg" alt="Engineer's house Apisseq" style="width: 100%; height: auto; display: block;">
+    <small style="display: block; text-align: center; padding: 5px;">Engineer's house Apisseq</small>
+</div>
 
 <p>Having already programed in Java, C# and of course BASIC, I&nbsp;thought it would be a great idea to learn Python since I&nbsp;have great interest in data science and machine learning, and those two topics seem to have an avid community within Python coders.</p>
 
