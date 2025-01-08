@@ -1,42 +1,35 @@
 .main-header {
   font-family: 'Lato', sans-serif;
-  padding: 10px 0 !important; /* 减少 padding 的值来降低高度 */
-  height: 10px !important; /* 设置固定高度 */
+  padding: 15px 0;
   background-color: $white;
   box-shadow: 0px -5px 15px rgba(0,0,0,.3);
-  display: flex; /* 确保内容垂直居中 */
-  align-items: center; /* 垂直居中 */
 }
+
 .header-wrapper {
   width: 400px; /* 设置 header 的宽度 */
-  max-width: 90%;
+  max-width: 90%; /* 最大宽度为 90% */
   margin: 0 auto; /* 居中显示 */
   position: relative;
 }
-  .header-flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%; /* 使 .header-flex 充满父容器的高度 */
-    margin: 0; /* 确保没有额外的 margin */
-    padding: 0; /* 确保没有额外的 padding */
-  }
 
-  .logo {
-    width: 50%;
-    text-align: center;
-    margin: 0; /* 确保没有额外的 margin */
-    padding: 0; /* 确保没有额外的 padding */
-    a {
-      text-decoration: none;
-      text-transform: uppercase;
-      font-size: 24px; /* 减小字体大小 */
-      font-weight: 300;
-      color: $dark-purple;
-      line-height: 1.2; /* 调整行高以适应新高度 */
-    }
+.main-header .header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-header .logo {
+  width: 50%;
+  text-align: center;
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 27px;
+    font-weight: 300;
+    color: $dark-purple;
   }
 }
+
 
 .main-nav {
   position: fixed;
