@@ -3,15 +3,19 @@
   padding: 15px 0;
   background-color: $white;
   box-shadow: 0px -5px 15px rgba(0,0,0,.3);
-  height: 80px; // 设置你想要的高度
-  display: flex; // 确保内容垂直居中
-  align-items: center; // 确保内容垂直居中
+  height: 80px; // 设置 header 的高度
+  display: flex;
+  align-items: center;
+
+  .header-wrapper {
+    width: 100%; // 确保占满宽度
+  }
 
   .header-flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%; // 确保 flex 容器占满宽度
+    width: 100%;
   }
 
   .logo {
