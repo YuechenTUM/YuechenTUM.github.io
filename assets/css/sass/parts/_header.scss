@@ -3,33 +3,29 @@
   padding: 15px 0;
   background-color: $white;
   box-shadow: 0px -5px 15px rgba(0,0,0,.3);
-}
+  height: 80px; // 设置你想要的高度
+  display: flex; // 确保内容垂直居中
+  align-items: center; // 确保内容垂直居中
 
-.header-wrapper {
-  width: 15px !important; /* 强制应用 */
-  max-width: 90% !important; /* 强制应用 */
-  margin: 0 auto !important; /* 强制应用 */
-  position: relative;
-}
+  .header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; // 确保 flex 容器占满宽度
+  }
 
-.main-header .header-flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.main-header .logo {
-  width: 50%;
-  text-align: center;
-  a {
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 15px;
-    font-weight: 300;
-    color: $dark-purple;
+  .logo {
+    width: 50%;
+    text-align: center;
+    a {
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 27px;
+      font-weight: 300;
+      color: $dark-purple;
+    }
   }
 }
-
 
 .main-nav {
   position: fixed;
