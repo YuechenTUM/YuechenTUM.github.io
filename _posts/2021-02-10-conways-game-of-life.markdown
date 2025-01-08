@@ -5,7 +5,7 @@ show_date: true
 title:  Those who live by the fox dens 
 date:   2022-02-10 13:32:20 -0600
 description: Root in Sisimiut and embrace the enchanting polar night and day, bask in the ethereal glow of the northern lights.
-img: posts/20210210/Game_of_Life.jpg
+img: posts/20210210/DJI_0080-HDR.jpg
 tags: [Travelling, Photography]
 author: Yuechen Chen
 instagram: 
