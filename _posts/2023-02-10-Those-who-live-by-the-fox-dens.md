@@ -13,8 +13,8 @@ instagram:
 <p>Sisimiut translates from Greenlandic as "those who live by the fox's hole",[5] and its previous Danish name was Holsteinburg, named after the Danish Count Johan Ludwig Holstein. It is located approximately 320 km north of Nuuk and about 75 km north of the Arctic Circle,[16] on the eastern side of the Davis Strait.</p>
 
 <div style="text-align: center;">
-  <img src="./assets/img/posts/Sisimiut/Apisseq.jpg" alt="Engineers's house Apisseq" style="width: 50%;">
-  <p><small>The High performance cluster - <a href="https://medium.com/quantonation/a-beginners-guide-to-high-performance-computing-ae70246a7af">Picture Source</a></small></p>
+  <img src="./assets/img/posts/Sisimiut/Apisseq.jpg" alt="Engineers's house Apisseq" style="width: 65%;">
+  <p><small>Engineers's house Apisseq - <a href="https://medium.com/quantonation/a-beginners-guide-to-high-performance-computing-ae70246a7af">Picture Source</a></small></p>
 </div>
 
 
