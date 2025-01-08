@@ -22,11 +22,11 @@
     }
   }
 
-  /* 添加或修改 header 中的 .wrapper 样式 */
-  .wrapper {
+  /* 使用方法二：单独控制 header 中的 .wrapper */
+  > .wrapper {
     width: 1200px; /* 修改为 1200px */
     max-width: 95%; /* 修改为 95% */
-    margin: 0 auto;
+    margin: 0 auto; /* 水平居中 */
     position: relative;
   }
 }
