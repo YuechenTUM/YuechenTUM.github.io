@@ -12,11 +12,15 @@
     justify-content: space-between;
     align-items: center;
     height: 100%; /* 使 .header-flex 充满父容器的高度 */
+    margin: 0; /* 确保没有额外的 margin */
+    padding: 0; /* 确保没有额外的 padding */
   }
 
   .logo {
     width: 50%;
     text-align: center;
+    margin: 0; /* 确保没有额外的 margin */
+    padding: 0; /* 确保没有额外的 padding */
     a {
       text-decoration: none;
       text-transform: uppercase;
