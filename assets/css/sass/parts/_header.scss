@@ -9,6 +9,7 @@
     justify-content: space-between;
     align-items: center;
   }
+
   .logo {
     width: 50%;
     text-align: center;
@@ -19,6 +20,14 @@
       font-weight: 300;
       color: $dark-purple;
     }
+  }
+
+  /* 添加或修改 header 中的 .wrapper 样式 */
+  .wrapper {
+    width: 1200px; /* 修改为 1200px */
+    max-width: 95%; /* 修改为 95% */
+    margin: 0 auto;
+    position: relative;
   }
 }
 .main-nav {
