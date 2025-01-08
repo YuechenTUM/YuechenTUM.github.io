@@ -537,7 +537,7 @@ svg {
           flex-grow: 1;
 }
 .wrapper {
-  width: 960px;
+  width: 400px;
   max-width: 90%;
   margin: 0.75em auto 0.75em;
   position: relative;
