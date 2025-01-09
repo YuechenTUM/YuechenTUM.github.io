@@ -17,7 +17,7 @@ author: Yuechen Chen
 </div>
 
 <div style="display: inline-block; padding: 10px 10px 0 10px; background-color: rgba(0, 0, 0, 0.1); box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
-  <img src="./assets/img/posts/Sisimiut/Apisseq.jpg" alt="Engineers's house Apisseq" style="display: block; max-width: 100%; height: auto;">
+  <img src="./assets/img/posts/Sisimiut/Apisseq.jpg" alt="Engineers's house Apisseq" style="display: block; max-width: 80%; height: auto;">
   <p style="text-align: center; margin: 10px 0 0 0;"><small>Engineers's house Apisseq (Photo by Malik Broberg)</small></p>
 </div>
 
