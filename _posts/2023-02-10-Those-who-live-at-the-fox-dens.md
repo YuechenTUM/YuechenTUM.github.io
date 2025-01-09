@@ -7,7 +7,8 @@ date:   2023-02-10 13:32:20 +0000
 description: Root in Sisimiut and embrace the enchanting polar night and day, bask in the ethereal glow of the northern lights.
 img: posts/Sisimiut/greenland.jpg
 tags: [Travelogue, Greenland]
-author: Yuechen Chen 
+author: Yuechen Chen
+toc: yes
 ---
 <blockquote style="font-family: 'Times New Roman', Times, serif; font-style: italic; font-size: 20px;">
 Who would have thought that life's winding paths would lead me here, to dwell amidst the breathtaking beauty of this untouched wilderness?
