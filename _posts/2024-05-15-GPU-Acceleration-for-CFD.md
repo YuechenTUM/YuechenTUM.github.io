@@ -6,15 +6,15 @@ title: GPU accleration for CFD
 date: 2024-05-15
 img: posts/2024-05-15/img_344654_1.png
 img_caption: "Photo by Bent Bach"
-tags: [Greenland, GPU, Ansys fluent, 3D model]
+tags: [Greenland, GPU, ansys fluent, 3D model]
 category: opinion
 author: Yueechen
-description: "When using the commercial software Fluent for simulation, in addition to focusing on the results, time cost is also a significant factor. So can long-term CFD transient simulations be accelerated?"
+description: "When using the commercial software fluent for simulation, in addition to focusing on the results, time cost is also a significant factor. So can long-term CFD transient simulations be accelerated?"
 toc: yes
 ---
 ## Background
 
-I recently completed my master's thesis, which focused on the CFD simulation of pit thermal storage. Initially, I collaborated with a Chinese university to develop a dedicated C++ program for fundamental acceleration but ended up using Ansys Fluent to simulate a 3D model for a year for various reasons in the remaining three months. This blog will explore ways to accelerate the simulation through considerations such as employing HPC, CPU selection, I/O performance, and case scaling.
+I recently completed my master's thesis, which focused on the CFD simulation of pit thermal storage. Initially, I collaborated with a Chinese university to develop a dedicated C++ program for fundamental acceleration but ended up using ansys fluent to simulate a 3D model for a year for various reasons in the remaining three months. This blog will explore ways to accelerate the simulation through considerations such as employing HPC, CPU selection, I/O performance, and case scaling.
 
 ## High-performance computing
 
@@ -32,7 +32,7 @@ High-performance computing uses tens of thousands to millions of processors or p
 ```bash
 #!/bin/sh
 # embedded options to bsub - start with #BSUB
-#BSUB -J Ansys_FLUENT_Case 
+#BSUB -J ansys_fluent_Case 
 #BSUB -q hpc
 #BSUB -W 04:00
 #BSUB -R "rusage[mem=2GB]"
@@ -60,7 +60,7 @@ It is also possible to use distributed storage to place tasks on different compu
 
 ## CPU Models and I/O Performance
 
-DTU Computing Center provides a range of CPU models to choose from. According to an Ansys [White paper](https://www.ansys.com/resource-center/white-paper/how-to-select-the-best-processor-and-hpc-system-for-your-ansys-workloads), Fluent generally benefits more from higher memory capacity and bandwidth than from higher core counts and frequencies [35]. The results show that the cpu XeonGold 6342 exhibits the fastest performance, with an average per-iteration time that is approximately 20.33% faster than the cpu XeonGold 6126. 
+DTU Computing Center provides a range of CPU models to choose from. According to an ansys [White paper](https://www.ansys.com/resource-center/white-paper/how-to-select-the-best-processor-and-hpc-system-for-your-ansys-workloads), fluent generally benefits more from higher memory capacity and bandwidth than from higher core counts and frequencies [35]. The results show that the cpu XeonGold 6342 exhibits the fastest performance, with an average per-iteration time that is approximately 20.33% faster than the cpu XeonGold 6126. 
 
 <div style="text-align: center;">
   <img src="./assets/img/posts/20240620/CPU.jpg" alt="CPU diagram" style="width: 85%;">
