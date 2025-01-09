@@ -2,7 +2,7 @@
 layout: post
 read_time: true
 show_date: true
-title:  Those who live by the fox dens 
+title:  Those who live at the fox den 
 date:   2023-02-10 13:32:20 -0600
 description: Root in Sisimiut and embrace the enchanting polar night and day, bask in the ethereal glow of the northern lights.
 img: posts/Sisimiut/greenland.jpg
@@ -10,7 +10,7 @@ tags: [Travelogue]
 author: Yuechen Chen 
 ---
 <blockquote style="font-family: 'Times New Roman', Times, serif; font-style: italic; font-size: 16px;">
-Sisimiut, derived from the Greenlandic phrase meaning "those who live by the fox's hole”,<sup><a href="http://www.rejseavisen.dk/Groenland-Byer-bygder-og-omraader.html" style="text-decoration: none;">[1]</a></sup> was formerly known by its Danish name, Holsteinburg, in honor of the Danish Count Johan Ludwig Holstein.<sup><a href="https://da.wikipedia.org/wiki/Sisimiut" style="text-decoration: none;">[2]</a></sup> 
+Sisimiut, literally means "those who live at the fox den", derives its name from the Greenlandic words "sisi", meaning "fox den",<sup><a href="https://ordbog.gl/2018-kal-eng/#e14271" style="text-decoration: none;">[1]</a></sup> and "miut", referring to "those who live in".<sup><a href="https://ordbog.gl/2018-kal-eng/#e14271" style="text-decoration: none;">[1]</a></sup> Formerly known as Holsteinsborg during the Danish colonial era.<sup><a href="https://da.wikipedia.org/wiki/Sisimiut" style="text-decoration: none;">[2]</a></sup>
 </blockquote>
 
 Situated approximately 320 kilometers north of Nuuk and about 75 kilometers north of the Arctic Circle.<sup><a href="https://archive.org/details/greenlandarcticl0000etai/page/8/mode/2up" style="text-decoration: none;">[3]</a></sup>
