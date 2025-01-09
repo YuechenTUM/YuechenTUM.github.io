@@ -11,11 +11,6 @@ author: Yuechen Chen
 ---
 <p>Sisimiut is approximately 320 kilometres north of Nuuk and about 75 kilometres north of the Arctic Circle.<sup><a href="https://archive.org/details/greenlandarcticl0000etai/page/8/mode/2up" style="text-decoration: none;">[3]</a></sup>. In 2022, I came to Sisimiut and resided in the Engineer's House, a cosy, two-story circular abode with charm and warmth. As I step out onto my balcony, I am greeted by the breathtaking sight of Nasaasaaq, its snow-clad peak standing proud as the highest in Sisimiut. Beyond its majestic silhouette lies the expanse of Baffin Bay, its icy waters stretching endlessly into the horizon.</p>
 
-<div style="text-align: center;">
-  <img src="./assets/img/posts/Sisimiut/Apisseq.jpg" alt="Engineers's house Apisseq" style="width: 70%;">
-  <p><small>Engineers's house Apisseq (Photo by Malik Broberg)- <a href="https://medium.com/quantonation/a-beginners-guide-to-high-performance-computing-ae70246a7af">Picture Source</a></small></p>
-</div>
-
 <div style="display: inline-block; padding: 10px 10px 0 10px; background-color: rgba(0, 0, 0, 0.1); box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
   <img src="./assets/img/posts/Sisimiut/Apisseq.jpg" alt="Engineers's house Apisseq" style="display: block; max-width: 80%; height: auto;">
   <p style="text-align: center; margin: 10px 0 0 0;"><small>Engineers's house Apisseq (Photo by Malik Broberg)</small></p>
