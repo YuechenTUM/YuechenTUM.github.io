@@ -13,6 +13,10 @@ author: Yuechen Chen
 Sisimiut, literally means "those who live at the fox den", derives its name from the Greenlandic words "sisi", meaning "fox den",<sup><a href="https://ordbog.gl/2018-kal-eng/#e14271" style="text-decoration: none;">[1]</a></sup> and "miut" referring to "those who live in". Formerly known as Holsteinsborg, named after Johann Ludwig Holstein.<sup><a href="https://da.wikipedia.org/wiki/Sisimiut" style="text-decoration: none;">[2]</a></sup>
 </blockquote>
 
+{% raw %}
+{% map 66.9330847937741 -53.675980933160815 10 %}
+{% endraw %}
+
 Situated approximately 320 kilometers north of Nuuk and about 75 kilometers north of the Arctic Circle.<sup><a href="https://archive.org/details/greenlandarcticl0000etai/page/8/mode/2up" style="text-decoration: none;">[3]</a></sup>
 
 <p>I reside in the Engineer's House, a cosy, two-story circular abode with charm and warmth. As I step out onto the balcony, I am greeted by the breathtaking sight of Nasaasaaq, its snow-clad peak standing proud as the highest in the region. Beyond its majestic silhouette lies the expanse of Baffin Bay, its icy waters stretching endlessly into the horizon.</p>
