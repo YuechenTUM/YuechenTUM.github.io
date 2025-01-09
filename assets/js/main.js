@@ -85,23 +85,3 @@ $(function () {
     }
   })
 });
-document.addEventListener('DOMContentLoaded', function() {
-    // 绑定标签点击事件
-    document.querySelectorAll('.tag-link').forEach(link => {
-        link.addEventListener('click', function(event) {
-            event.preventDefault();
-            const tag = this.getAttribute('data-tag').replace(/ /g, '-'); // 替换空格为连字符
-            // 隐藏所有标签内容
-            document.querySelectorAll('.tag-master').forEach(div => {
-                div.classList.add('hidden');
-            });
-            // 显示当前标签内容
-            const targetDiv = document.getElementById(tag);
-            if (targetDiv) {
-                targetDiv.classList.remove('hidden');
-            } else {
-                console.error(`Element with id "${tag}" not found.`);
-            }
-        });
-    });
-});
