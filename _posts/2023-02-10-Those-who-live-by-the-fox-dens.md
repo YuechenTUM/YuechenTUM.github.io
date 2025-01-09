@@ -9,7 +9,7 @@ img: posts/Sisimiut/greenland.jpg
 tags: [Travelling, Photography]
 author: Yuechen Chen 
 ---
->Sisimiut, derived from the Greenlandic phrase meaning "those who live by the fox's hole,"[5] was formerly known by its Danish name, Holsteinburg, in honor of the Danish Count Johan Ludwig Holstein. Situated approximately 320 kilometers north of Nuuk and about 75 kilometers north of the Arctic Circle,[16] it lies on the eastern shores of the Davis Strait. It’s almost beyond imagination that one day I might have the chance to live in such a breathtaking place.
+>Sisimiut, derived from the Greenlandic phrase meaning "those who live by the fox's hole,"[[1]](http://www.rejseavisen.dk/Groenland-Byer-bygder-og-omraader.html)was formerly known by its Danish name, Holsteinburg, in honor of the Danish Count Johan Ludwig Holstein [[2]](https://da.wikipedia.org/wiki/Sisimiut#cite_note-6). Situated approximately 320 kilometers north of Nuuk and about 75 kilometers north of the Arctic Circle,[[3]](https://archive.org/details/greenlandarcticl0000etaihttps://archive.org/details/greenlandarcticl0000etai) It’s almost beyond imagination that one day I might have the chance to live in such a breathtaking place.
 
 <p>I reside in the Engineer's House, a cosy, two-story circular abode with charm and warmth. As I step out onto the balcony, I am greeted by the breathtaking sight of Nasaasaaq, its snow-clad peak standing proud as the highest in the region. Beyond its majestic silhouette lies the expanse of Baffin Bay, its icy waters stretching endlessly into the horizon.</p>
 
