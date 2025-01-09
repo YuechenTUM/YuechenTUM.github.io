@@ -5,7 +5,7 @@ show_date: true
 title: Those who live at the fox den
 date: 2023-02-10
 img: posts/Sisimiut/greenland.jpg
-tags: [Travelogue, Greenland]
+tags: [travelogue,greenland]
 category: opinion
 author: Yueechen
 description: Root in Sisimiut and embrace the enchanting polar night and day, bask in the ethereal glow of the northern lights.
