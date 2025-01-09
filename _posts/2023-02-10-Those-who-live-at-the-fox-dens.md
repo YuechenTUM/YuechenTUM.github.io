@@ -7,6 +7,7 @@ date:   2023-02-10 13:32:20 +0000
 description: Root in Sisimiut and embrace the enchanting polar night and day, bask in the ethereal glow of the northern lights.
 img: posts/Sisimiut/greenland.jpg
 tags: [Travelogue, Greenland]
+category: opinion
 author: Yuechen Chen
 toc: yes
 ---
