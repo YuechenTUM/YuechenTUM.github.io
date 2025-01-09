@@ -6,7 +6,7 @@ title: GPU accleration for CFD
 date: 2024-05-15
 img: posts/2024-05-15/img_344654_1.png
 img_caption: "Photo by Bent Bach"
-tags: [gpu, cfd]
+tags: ["GPU", "cfd"]
 category: opinion
 author: Yueechen
 description: "When using the commercial software fluent for simulation, in addition to focusing on the results, time cost is also a significant factor. So can long-term CFD transient simulations be accelerated?"
