@@ -9,12 +9,12 @@ img_caption: "Photo by Bent Bach"
 tags: [cfd, high-performance computing, ansys fluent, 3D model]
 category: opinion
 author: Yueechen
-description: "When using the commercial software Fluent for simulation, in addition to focusing on the results, time cost is also a significant factor. So can long-term CFD transient simulations be accelerated?"
+description: "When using the commercial software fluent for simulation, in addition to focusing on the results, time cost is also a significant factor. So can long-term CFD transient simulations be accelerated?"
 toc: yes
 ---
 ## Background
 
-I recently completed my master's thesis, which focused on the CFD simulation of pit thermal storage. Initially, I collaborated with a Chinese university to develop a dedicated C++ program for fundamental acceleration but ended up using Ansys Fluent to simulate a 3D model for a year for various reasons in the remaining three months. This blog will explore ways to accelerate the simulation through considerations such as employing HPC, CPU selection, I/O performance, and case scaling.
+I recently completed my master's thesis, which focused on the CFD simulation of pit thermal storage. Initially, I collaborated with a Chinese university to develop a dedicated C++ program for fundamental acceleration but ended up using ansys fluent to simulate a 3D model for a year for various reasons in the remaining three months. This blog will explore ways to accelerate the simulation through considerations such as employing HPC, CPU selection, I/O performance, and case scaling.
 
 ## High-performance computing
 
@@ -32,7 +32,7 @@ High-performance computing uses tens of thousands to millions of processors or p
 ```bash
 #!/bin/sh
 # embedded options to bsub - start with #BSUB
-#BSUB -J Ansys_FLUENT_Case 
+#BSUB -J ansys_fluent_Case 
 #BSUB -q hpc
 #BSUB -W 04:00
 #BSUB -R "rusage[mem=2GB]"
@@ -60,7 +60,7 @@ It is also possible to use distributed storage to place tasks on different compu
 
 ## CPU Models and I/O Performance
 
-DTU Computing Center provides a range of CPU models to choose from. According to an Ansys [White paper](https://www.ansys.com/resource-center/white-paper/how-to-select-the-best-processor-and-hpc-system-for-your-ansys-workloads), Fluent generally benefits more from higher memory capacity and bandwidth than from higher core counts and frequencies [35]. The results show that the cpu XeonGold 6342 exhibits the fastest performance, with an average per-iteration time that is approximately 20.33% faster than the cpu XeonGold 6126. 
+DTU Computing Center provides a range of CPU models to choose from. According to an ansys [White paper](https://www.ansys.com/resource-center/white-paper/how-to-select-the-best-processor-and-hpc-system-for-your-ansys-workloads), fluent generally benefits more from higher memory capacity and bandwidth than from higher core counts and frequencies [35]. The results show that the cpu XeonGold 6342 exhibits the fastest performance, with an average per-iteration time that is approximately 20.33% faster than the cpu XeonGold 6126. 
 
 <div style="text-align: center;">
   <img src="./assets/img/posts/20240620/CPU.jpg" alt="CPU diagram" style="width: 85%;">
@@ -69,9 +69,9 @@ DTU Computing Center provides a range of CPU models to choose from. According to
 
 In addition, communication throughput is critical for large clusters, especially when dealing with transient models. In addition, I/O performance plays a crucial role. However, students often lack direct access to monitor system I/O activity, which makes it challenging to evaluate the performance of I/O performance. Through a rough test, the model with a reporting interval of 600 seconds takes approximately 28.65% longer than the model without reporting output. And The total wall clock time with a reporting output interval of 1200 seconds is comparable to the wall clock time without any output.
 
-## Fluent version
+## fluent version
 
-At the same time, it is necessary to consider the impact of different versions of Ansys Fluent on computing efficiency. As Ansys continues to develop and optimize the underlying code, the computing speed is expected to increase in theory. Three Fluent versions, 202R1, 2021R1, and 2022R1, were tested. Versions 2023 and 2024 have undergone major changes, so these two versions were not tested. In the tests of these three versions in the same environment, in addition to testing single-thread serial computing, 2 or 4-thread parallel computing was also tested. In serial computing, the 2021R1 version was 7.479% slower than the 2020R1 version unexpectedly, and the 2022R1 version was 10.20% slower. In four-thread parallel computing, the 2021R1 version was 7.94% slower than the 2020R1 version, and the 2022R1 version was 7.597% slower than the 2020R1 version.
+At the same time, it is necessary to consider the impact of different versions of ansys fluent on computing efficiency. As ansys continues to develop and optimize the underlying code, the computing speed is expected to increase in theory. Three fluent versions, 202R1, 2021R1, and 2022R1, were tested. Versions 2023 and 2024 have undergone major changes, so these two versions were not tested. In the tests of these three versions in the same environment, in addition to testing single-thread serial computing, 2 or 4-thread parallel computing was also tested. In serial computing, the 2021R1 version was 7.479% slower than the 2020R1 version unexpectedly, and the 2022R1 version was 10.20% slower. In four-thread parallel computing, the 2021R1 version was 7.94% slower than the 2020R1 version, and the 2022R1 version was 7.597% slower than the 2020R1 version.
 
 ## Scaling
 
