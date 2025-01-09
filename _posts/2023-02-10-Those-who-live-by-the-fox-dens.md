@@ -6,10 +6,12 @@ title:  Those who live by the fox dens
 date:   2023-02-10 13:32:20 -0600
 description: Root in Sisimiut and embrace the enchanting polar night and day, bask in the ethereal glow of the northern lights.
 img: posts/Sisimiut/greenland.jpg
-tags: [Travelling, Photography]
+tags: [Travelogue]
 author: Yuechen Chen 
 ---
->Sisimiut, derived from the Greenlandic phrase meaning "those who live by the fox's hole,"[[1]](http://www.rejseavisen.dk/Groenland-Byer-bygder-og-omraader.html)was formerly known by its Danish name, Holsteinburg, in honor of the Danish Count Johan Ludwig Holstein [[2]](https://da.wikipedia.org/wiki/Sisimiut#cite_note-6). Situated approximately 320 kilometers north of Nuuk and about 75 kilometers north of the Arctic Circle,[[3]](https://archive.org/details/greenlandarcticl0000etaihttps://archive.org/details/greenlandarcticl0000etai) It’s almost beyond imagination that one day I might have the chance to live in such a breathtaking place.
+<div style="font-family: 'Times New Roman', Times, serif; font-size: smaller;">
+>Sisimiut, derived from the Greenlandic phrase meaning "those who live by the fox's hole,"[[1]](http://www.rejseavisen.dk/Groenland-Byer-bygder-og-omraader.html)was formerly known by its Danish name, Holsteinburg, in honor of the Danish Count Johan Ludwig Holstein [[2]](https://da.wikipedia.org/wiki/Sisimiut). Situated approximately 320 kilometers north of Nuuk and about 75 kilometers north of the Arctic Circle,[[3]](https://archive.org/details/greenlandarcticl0000etai/page/8/mode/2up) It’s almost beyond imagination that one day I might have the chance to live in such a breathtaking place.
+</div>
 
 <p>I reside in the Engineer's House, a cosy, two-story circular abode with charm and warmth. As I step out onto the balcony, I am greeted by the breathtaking sight of Nasaasaaq, its snow-clad peak standing proud as the highest in the region. Beyond its majestic silhouette lies the expanse of Baffin Bay, its icy waters stretching endlessly into the horizon.</p>
 
