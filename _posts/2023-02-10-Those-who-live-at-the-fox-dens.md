@@ -9,28 +9,16 @@ img: posts/Sisimiut/greenland.jpg
 tags: [Travelogue]
 author: Yuechen Chen 
 ---
-<blockquote style="font-family: 'Times New Roman', Times, serif; font-style: italic; font-size: 20px;">
-Sisimiut, literally means "those who live at the fox den", derives its name from the Greenlandic words "sisi", meaning "fox den",<sup><a href="https://ordbog.gl/2018-kal-eng/#e14271" style="text-decoration: none;">[1]</a></sup> and "miut" referring to "those who live in". Formerly known as Holsteinsborg, named after Johann Ludwig Holstein.<sup><a href="https://da.wikipedia.org/wiki/Sisimiut" style="text-decoration: none;">[2]</a></sup>
-</blockquote>
-
-<iframe 
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17041.715161967!2d-53.683333!3d66.933333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ea0e4b5f8a1b3b5%3A0x1f7a8a0a0a0a0a0a!2sSisimiut%2C%20Greenland!5e0!3m2!1sen!2sus!4v1633024000000!5m2!1sen!2sus" 
-  width="600" 
-  height="450" 
-  style="border:0;" 
-  allowfullscreen="" 
-  loading="lazy">
-</iframe>
-
-Situated approximately 320 kilometers north of Nuuk and about 75 kilometers north of the Arctic Circle.<sup><a href="https://archive.org/details/greenlandarcticl0000etai/page/8/mode/2up" style="text-decoration: none;">[3]</a></sup>
-
-<p>I reside in the Engineer's House, a cosy, two-story circular abode with charm and warmth. As I step out onto the balcony, I am greeted by the breathtaking sight of Nasaasaaq, its snow-clad peak standing proud as the highest in the region. Beyond its majestic silhouette lies the expanse of Baffin Bay, its icy waters stretching endlessly into the horizon.</p>
+<p>Sisimiut is approximately 320 kilometres north of Nuuk and about 75 kilometres north of the Arctic Circle.<sup><a href="https://archive.org/details/greenlandarcticl0000etai/page/8/mode/2up" style="text-decoration: none;">[3]</a></sup>. In 2022, I came to Sisimiut and resided in the Engineer's House, a cosy, two-story circular abode with charm and warmth. As I step out onto my balcony, I am greeted by the breathtaking sight of Nasaasaaq, its snow-clad peak standing proud as the highest in Sisimiut. Beyond its majestic silhouette lies the expanse of Baffin Bay, its icy waters stretching endlessly into the horizon.</p>
 
 <div style="text-align: center;">
   <img src="./assets/img/posts/Sisimiut/Apisseq.jpg" alt="Engineers's house Apisseq" style="width: 70%;">
   <p><small>Engineers's house Apisseq (Photo by Malik Broberg)- <a href="https://medium.com/quantonation/a-beginners-guide-to-high-performance-computing-ae70246a7af">Picture Source</a></small></p>
 </div>
 
+<blockquote style="font-family: 'Times New Roman', Times, serif; font-style: italic; font-size: 20px;">
+Sisimiut, literally means "those who live at the fox den", derives its name from the Greenlandic words "sisi", meaning "fox den",<sup><a href="https://ordbog.gl/2018-kal-eng/#e14271" style="text-decoration: none;">[1]</a></sup> and "miut" referring to "those who live in". Formerly known as Holsteinsborg, named after Johann Ludwig Holstein.<sup><a href="https://da.wikipedia.org/wiki/Sisimiut" style="text-decoration: none;">[2]</a></sup>
+</blockquote>
 
 <p>Having already programed in Java, C# and of course BASIC, I&nbsp;thought it would be a great idea to learn Python since I&nbsp;have great interest in data science and machine learning, and those two topics seem to have an avid community within Python coders.</p>
 
