@@ -11,10 +11,13 @@ author: Yuechen Chen
 ---
 <p>Sisimiut is approximately 320 kilometres north of Nuuk and about 75 kilometres north of the Arctic Circle.<sup><a href="https://archive.org/details/greenlandarcticl0000etai/page/8/mode/2up" style="text-decoration: none;">[3]</a></sup>. In 2022, I came to Sisimiut and resided in the Engineer's House, a cosy, two-story circular abode with charm and warmth. As I step out onto my balcony, I am greeted by the breathtaking sight of Nasaasaaq, its snow-clad peak standing proud as the highest in Sisimiut. Beyond its majestic silhouette lies the expanse of Baffin Bay, its icy waters stretching endlessly into the horizon.</p>
 
-<div style="display: inline-block; width: 80%; padding: 10px; background-color: rgba(0, 0, 0, 0.1); box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
-  <img src="./assets/img/posts/Sisimiut/Apisseq.jpg" alt="Engineers's house Apisseq" style="display: block; width: 100%; height: auto;">
-  <p style="text-align: center; margin: 10px 0 0 0;"><small>Engineers's house Apisseq (Photo by Malik Broberg)</small></p>
+<div style="text-align: center;">
+  <div style="display: block; width: 80%; padding: 10px; background-color: rgba(0, 0, 0, 0.1); box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); margin: 0 auto;">
+    <img src="./assets/img/posts/Sisimiut/Apisseq.jpg" alt="Engineers's house Apisseq" style="display: block; width: 100%; height: auto;">
+    <p style="text-align: center; margin: 10px 0 0 0;"><small>Engineers's house Apisseq (Photo by Malik Broberg)</small></p>
+  </div>
 </div>
+
 
 <blockquote style="font-family: 'Times New Roman', Times, serif; font-style: italic; font-size: 20px;">
 Sisimiut, literally means "those who live at the fox den", derives its name from the Greenlandic words "sisi", meaning "fox den",<sup><a href="https://ordbog.gl/2018-kal-eng/#e14271" style="text-decoration: none;">[1]</a></sup> and "miut" referring to "those who live in". Formerly known as Holsteinsborg, named after Johann Ludwig Holstein.<sup><a href="https://da.wikipedia.org/wiki/Sisimiut" style="text-decoration: none;">[2]</a></sup>
