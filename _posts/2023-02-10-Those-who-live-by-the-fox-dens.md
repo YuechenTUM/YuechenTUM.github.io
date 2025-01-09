@@ -9,9 +9,11 @@ img: posts/Sisimiut/greenland.jpg
 tags: [Travelogue]
 author: Yuechen Chen 
 ---
-<blockquote style="font-family: 'Times New Roman', Times, serif; font-style: italic; font-size: 12px;">
-Sisimiut, derived from the Greenlandic phrase meaning "those who live by the fox's hole,"<sup><a href="http://www.rejseavisen.dk/Groenland-Byer-bygder-og-omraader.html" style="text-decoration: none;">[1]</a></sup> was formerly known by its Danish name, Holsteinburg, in honor of the Danish Count Johan Ludwig Holstein<sup><a href="https://da.wikipedia.org/wiki/Sisimiut" style="text-decoration: none;">[2]</a></sup>. Situated approximately 320 kilometers north of Nuuk and about 75 kilometers north of the Arctic Circle,<sup><a href="https://archive.org/details/greenlandarcticl0000etai/page/8/mode/2up" style="text-decoration: none;">[3]</a></sup> It’s almost beyond imagination that one day I might have the chance to live in such a breathtaking place.
+<blockquote style="font-family: 'Times New Roman', Times, serif; font-style: italic; font-size: 16px;">
+Sisimiut, derived from the Greenlandic phrase meaning "those who live by the fox's hole”,<sup><a href="http://www.rejseavisen.dk/Groenland-Byer-bygder-og-omraader.html" style="text-decoration: none;">[1]</a></sup> was formerly known by its Danish name, Holsteinburg, in honor of the Danish Count Johan Ludwig Holstein.<sup><a href="https://da.wikipedia.org/wiki/Sisimiut" style="text-decoration: none;">[2]</a></sup> 
 </blockquote>
+
+Situated approximately 320 kilometers north of Nuuk and about 75 kilometers north of the Arctic Circle.<sup><a href="https://archive.org/details/greenlandarcticl0000etai/page/8/mode/2up" style="text-decoration: none;">[3]</a></sup>
 
 <p>I reside in the Engineer's House, a cosy, two-story circular abode with charm and warmth. As I step out onto the balcony, I am greeted by the breathtaking sight of Nasaasaaq, its snow-clad peak standing proud as the highest in the region. Beyond its majestic silhouette lies the expanse of Baffin Bay, its icy waters stretching endlessly into the horizon.</p>
 
