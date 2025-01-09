@@ -6,7 +6,7 @@ title: Can CFD simulations be accelerated?
 date: 2024-06-20
 img: posts/20240620/HPC.jpg
 img_caption: "Photo by Bent Bach"
-tags: [CFD, High-performance computing, Ansys fluent, 3D model]
+tags: [cfd, high-performance computing, ansys fluent, 3D model]
 category: opinion
 author: Yueechen
 description: "When using the commercial software Fluent for simulation, in addition to focusing on the results, time cost is also a significant factor. So can long-term CFD transient simulations be accelerated?"
