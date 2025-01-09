@@ -16,9 +16,11 @@ author: Yuechen Chen
   <p><small>Engineers's house Apisseq (Photo by Malik Broberg)- <a href="https://medium.com/quantonation/a-beginners-guide-to-high-performance-computing-ae70246a7af">Picture Source</a></small></p>
 </div>
 
-<div style="display: inline-block; padding: 10px; background-color: rgba(0, 0, 0, 0.1); box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
-  <img src="./assets/img/posts/Sisimiut/Apisseq.jpg" alt="YEngineers's house Apisseq" style="display: block; max-width: 70%; height: auto;">
-  <p><small>Engineers's house Apisseq (Photo by Malik Broberg)</small></p>
+<div style="text-align: center;">
+  <div style="display: inline-block; padding: 10px; background-color: rgba(0, 0, 0, 0.1); box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+    <img src="./assets/img/posts/Sisimiut/Apisseq.jpg" alt="Engineers's house Apisseq" style="display: block; max-width: 70%; height: auto;">
+    <p style="text-align: center;"><small>Engineers's house Apisseq (Photo by Malik Broberg)</small></p>
+  </div>
 </div>
 
 <blockquote style="font-family: 'Times New Roman', Times, serif; font-style: italic; font-size: 20px;">
