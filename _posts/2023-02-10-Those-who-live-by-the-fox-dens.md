@@ -7,14 +7,15 @@ date:   2023-02-10 13:32:20 -0600
 description: Root in Sisimiut and embrace the enchanting polar night and day, bask in the ethereal glow of the northern lights.
 img: posts/Sisimiut/greenland.jpg
 tags: [Travelling, Photography]
-author: Yuechen Chen
-instagram: 
+author: Yuechen Chen 
 ---
-<p>Sisimiut translates from Greenlandic as "those who live by the fox's hole",[5] and its previous Danish name was Holsteinburg, named after the Danish Count Johan Ludwig Holstein. It is located approximately 320 km north of Nuuk and about 75 km north of the Arctic Circle,[16] on the eastern side of the Davis Strait.</p>
+<p>Sisimiut, derived from the Greenlandic phrase meaning "those who live by the fox's hole,"[5] was formerly known by its Danish name, Holsteinburg, in honor of the Danish Count Johan Ludwig Holstein. Situated approximately 320 kilometers north of Nuuk and about 75 kilometers north of the Arctic Circle,[16] it lies on the eastern shores of the Davis Strait. It’s almost beyond imagination that one day I might have the chance to live in such a breathtaking place.</p>
+
+<p>I reside in the Engineer's House, a cosy, two-story circular abode with charm and warmth. As I step out onto the balcony, I am greeted by the breathtaking sight of Nasaasaaq, its snow-clad peak standing proud as the highest in the region. Beyond its majestic silhouette lies the expanse of Baffin Bay, its icy waters stretching endlessly into the horizon.</p>
 
 <div style="text-align: center;">
-  <img src="./assets/img/posts/Sisimiut/Apisseq.jpg" alt="Engineers's house Apisseq" style="width: 65%;">
-  <p><small>Engineers's house Apisseq - <a href="https://medium.com/quantonation/a-beginners-guide-to-high-performance-computing-ae70246a7af">Picture Source</a></small></p>
+  <img src="./assets/img/posts/Sisimiut/Apisseq.jpg" alt="Engineers's house Apisseq" style="width: 70%;">
+  <p><small>Engineers's house Apisseq (Photo by Malik Broberg)- <a href="https://medium.com/quantonation/a-beginners-guide-to-high-performance-computing-ae70246a7af">Picture Source</a></small></p>
 </div>
 
 
