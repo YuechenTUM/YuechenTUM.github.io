@@ -9,7 +9,7 @@ img: posts/Sisimiut/greenland.jpg
 tags: [Travelogue]
 author: Yuechen Chen 
 ---
-<blockquote style="font-family: 'Times New Roman', Times, serif; font-style: italic; font-size: 16px;">
+<blockquote style="font-family: 'Times New Roman', Times, serif; font-style: italic; font-size: 20px;">
 Sisimiut, literally means "those who live at the fox den", derives its name from the Greenlandic words "sisi", meaning "fox den",<sup><a href="https://ordbog.gl/2018-kal-eng/#e14271" style="text-decoration: none;">[1]</a></sup> and "miut", referring to "those who live in".<sup><a href="https://ordbog.gl/2018-kal-eng/#e14271" style="text-decoration: none;">[1]</a></sup> Formerly known as Holsteinsborg during the Danish colonial era.<sup><a href="https://da.wikipedia.org/wiki/Sisimiut" style="text-decoration: none;">[2]</a></sup>
 </blockquote>
 
