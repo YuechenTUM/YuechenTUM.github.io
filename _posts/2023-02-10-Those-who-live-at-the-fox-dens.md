@@ -9,7 +9,6 @@ tags: [Travelogue, Greenland]
 category: opinion
 author: Yueechen
 description: Root in Sisimiut and embrace the enchanting polar night and day, bask in the ethereal glow of the northern lights.
-toc: yes
 ---
 <blockquote style="font-family: 'Times New Roman', Times, serif; font-style: italic; font-size: 20px;">
 Who would have thought that life's winding paths would lead me here, to dwell amidst the breathtaking beauty of this untouched wilderness?
