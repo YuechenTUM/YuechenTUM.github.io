@@ -21,17 +21,17 @@ Who would have thought that life's winding paths would lead me here, to dwell am
     <div class="carousel-inner" style="display: flex; transition: transform 0.5s ease;">
       <!-- 图片 1 -->
       <div class="carousel-item" style="min-width: 100%; box-sizing: border-box;">
-        <img src="./assets/img/posts/Nuuk/nuuk1.png" alt="Nuuk Image 1" style="width: 100%; height: auto;">
+        <img src="./assets/img/posts/Nuuk/nuuk2.png" alt="Nuuk Image 1" style="width: 100%; height: auto;">
         <p style="text-align: center; margin: 10px 0 0 0;"><small>Nuuk Image 1 Description</small></p>
       </div>
       <!-- 图片 2 -->
       <div class="carousel-item" style="min-width: 100%; box-sizing: border-box;">
-        <img src="./assets/img/posts/Nuuk/nuuk2.png" alt="Nuuk Image 2" style="width: 100%; height: auto;">
+        <img src="./assets/img/posts/Nuuk/nuuk4.png" alt="Nuuk Image 2" style="width: 100%; height: auto;">
         <p style="text-align: center; margin: 10px 0 0 0;"><small>Nuuk Image 2 Description</small></p>
       </div>
       <!-- 图片 3 -->
       <div class="carousel-item" style="min-width: 100%; box-sizing: border-box;">
-        <img src="./assets/img/posts/Nuuk/nuuk4.png" alt="Nuuk Image 3" style="width: 100%; height: auto;">
+        <img src="./assets/img/posts/Nuuk/nuuk5.png" alt="Nuuk Image 3" style="width: 100%; height: auto;">
         <p style="text-align: center; margin: 10px 0 0 0;"><small>Nuuk Image 3 Description</small></p>
       </div>
     </div>
