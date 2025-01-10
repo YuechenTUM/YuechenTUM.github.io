@@ -23,3 +23,49 @@ Who would have thought that life's winding paths would lead me here, to dwell am
   </div>
 </div>
 
+<div style="text-align: center;">
+  <div class="carousel" style="position: relative; width: 80%; margin: 0 auto; overflow: hidden;">
+    <div class="carousel-inner" style="display: flex; transition: transform 0.5s ease;">
+      <!-- 图片 1 -->
+      <div class="carousel-item" style="min-width: 100%; box-sizing: border-box;">
+        <img src="./assets/img/posts/Nuuk/nuuk1.png" alt="Nuuk Image 1" style="width: 100%; height: auto;">
+        <p style="text-align: center; margin: 10px 0 0 0;"><small>Nuuk Image 1 Description</small></p>
+      </div>
+      <!-- 图片 2 -->
+      <div class="carousel-item" style="min-width: 100%; box-sizing: border-box;">
+        <img src="./assets/img/posts/Nuuk/nuuk2.png" alt="Nuuk Image 2" style="width: 100%; height: auto;">
+        <p style="text-align: center; margin: 10px 0 0 0;"><small>Nuuk Image 2 Description</small></p>
+      </div>
+      <!-- 图片 3 -->
+      <div class="carousel-item" style="min-width: 100%; box-sizing: border-box;">
+        <img src="./assets/img/posts/Nuuk/nuuk3.png" alt="Nuuk Image 3" style="width: 100%; height: auto;">
+        <p style="text-align: center; margin: 10px 0 0 0;"><small>Nuuk Image 3 Description</small></p>
+      </div>
+    </div>
+    <!-- 翻页按钮 -->
+    <button class="carousel-control-prev" onclick="prevSlide()" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background: rgba(0, 0, 0, 0.5); color: white; border: none; padding: 10px; cursor: pointer;">&#10094;</button>
+    <button class="carousel-control-next" onclick="nextSlide()" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); background: rgba(0, 0, 0, 0.5); color: white; border: none; padding: 10px; cursor: pointer;">&#10095;</button>
+  </div>
+</div>
+
+<script>
+  let currentIndex = 0;
+
+  function showSlide(index) {
+    const carouselInner = document.querySelector('.carousel-inner');
+    const totalItems = document.querySelectorAll('.carousel-item').length;
+    if (index >= totalItems) currentIndex = 0;
+    if (index < 0) currentIndex = totalItems - 1;
+    carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
+
+  function nextSlide() {
+    currentIndex++;
+    showSlide(currentIndex);
+  }
+
+  function prevSlide() {
+    currentIndex--;
+    showSlide(currentIndex);
+  }
+</script>
