@@ -19,17 +19,19 @@ Who would have thought that life's winding paths would lead me here, to dwell am
 <div style="text-align: center;">
   <div class="carousel" style="position: relative; width: 80%; margin: 0 auto; overflow: hidden;">
     <div class="carousel-inner" style="display: flex; transition: transform 0.5s ease;">
-      <!-- 动态加载的图片容器 -->
+      <!-- 图片 1 -->
       <div class="carousel-item" style="min-width: 100%; box-sizing: border-box;">
-        <div id="image1" style="width: 100%; height: auto;"></div>
+        <img src="./assets/img/posts/Nuuk/nuuk1.png" alt="Nuuk Image 1" style="width: 100%; height: auto;">
         <p style="text-align: center; margin: 10px 0 0 0;"><small>Nuuk Image 1 Description</small></p>
       </div>
+      <!-- 图片 2 -->
       <div class="carousel-item" style="min-width: 100%; box-sizing: border-box;">
-        <div id="image2" style="width: 100%; height: auto;"></div>
+        <img src="./assets/img/posts/Nuuk/nuuk2.png" alt="Nuuk Image 2" style="width: 100%; height: auto;">
         <p style="text-align: center; margin: 10px 0 0 0;"><small>Nuuk Image 2 Description</small></p>
       </div>
+      <!-- 图片 3 -->
       <div class="carousel-item" style="min-width: 100%; box-sizing: border-box;">
-        <div id="image3" style="width: 100%; height: auto;"></div>
+        <img src="./assets/img/posts/Nuuk/nuuk3.png" alt="Nuuk Image 3" style="width: 100%; height: auto;">
         <p style="text-align: center; margin: 10px 0 0 0;"><small>Nuuk Image 3 Description</small></p>
       </div>
     </div>
@@ -40,22 +42,6 @@ Who would have thought that life's winding paths would lead me here, to dwell am
 </div>
 
 <script>
-  // 动态加载图片
-  const images = [
-    { id: 'image1', src: './assets/img/posts/Nuuk/nuuk1.png' },
-    { id: 'image2', src: './assets/img/posts/Nuuk/nuuk2.png' },
-    { id: 'image3', src: './assets/img/posts/Nuuk/nuuk3.png' }
-  ];
-
-  images.forEach(image => {
-    const img = new Image();
-    img.src = image.src;
-    img.style.width = '100%';
-    img.style.height = 'auto';
-    document.getElementById(image.id).appendChild(img);
-  });
-
-  // 轮播逻辑
   let currentIndex = 0;
 
   function showSlide(index) {
@@ -75,6 +61,27 @@ Who would have thought that life's winding paths would lead me here, to dwell am
     currentIndex--;
     showSlide(currentIndex);
   }
+</script>
+
+<!-- 混淆图片 URL -->
+<div id="imageContainer" style="width: 100%; height: 300px;"></div>
+
+<script>
+  // 混淆图片 URL
+  function getImageUrl() {
+    const parts = [
+      './as', 'sets/', 'img/', 'posts/', 'Nu', 'uk/', 'nu', 'uk1', '.pn', 'g'
+    ];
+    return parts.join('');
+  }
+
+  // 动态加载图片
+  const imageContainer = document.getElementById('imageContainer');
+  const img = new Image();
+  img.src = getImageUrl(); // 获取混淆后的图片 URL
+  img.style.width = '100%';
+  img.style.height = 'auto';
+  imageContainer.appendChild(img);
 </script>
 
 <!-- 仅在图片上禁用右键菜单 -->
