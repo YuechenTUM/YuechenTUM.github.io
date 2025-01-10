@@ -23,3 +23,27 @@ Who would have thought that life's winding paths would lead me here, to dwell am
   </div>
 </div>
 
+<!-- 禁止图片右键菜单和长按下载 -->
+<script>
+  document.querySelectorAll('img').forEach(img => {
+    // 禁用右键菜单
+    img.addEventListener('contextmenu', (e) => e.preventDefault());
+
+    // 禁用长按菜单（兼容 iOS）
+    img.addEventListener('touchstart', (e) => e.preventDefault(), { passive: false });
+    img.addEventListener('touchend', (e) => e.preventDefault(), { passive: false });
+
+    // 禁用图片的指针事件
+    img.style.pointerEvents = 'none';
+  });
+</script>
+
+<!-- 禁止用户在页面中选择文本 -->
+<style>
+  body {
+    -webkit-user-select: none; /* Safari 和 iOS */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* IE 10+ */
+    user-select: none;         /* 现代浏览器 */
+  }
+</style>
