@@ -142,8 +142,7 @@ Who would have thought that life's winding paths would lead me here, to dwell am
   carouselInner.addEventListener('mouseleave', () => {
     isDragging = false;
   });
-</script>
-
+  
 // 触摸滑动功能
   let startX = 0;
   let isDragging = false;
