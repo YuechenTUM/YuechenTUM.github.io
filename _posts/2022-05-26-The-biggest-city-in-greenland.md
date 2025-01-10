@@ -22,22 +22,22 @@ Who would have thought that life's winding paths would lead me here, to dwell am
       <!-- 图片 1 -->
       <div class="carousel-item" style="min-width: 100%; box-sizing: border-box;">
         <div class="image-container" style="display: block; width: 100%; padding: 10px; background-color: rgba(0, 0, 0, 0.1); box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); margin: 0 auto;">
-          <img src="./assets/img/posts/Nuuk/nuuk2.png" alt="Nuuk Image 1" style="display: block; width: 100%; height: 100%; object-fit: cover;" oncontextmenu="return false;" draggable="false" style="pointer-events: none;" />
-          <p style="text-align: center; font-size: 10px; margin: 5px 0 0 0;"><small>Nuuk Image 1 Description</small></p>
+          <img src="./assets/img/posts/Nuuk/nuuk2.png" alt="Nuuk Image 1" style="display: block; width: 100%; height: 100%; object-fit: cover;" />
+          <p style="text-align: center; margin: 10px 0 0 0;"><small>Nuuk Image 1 Description</small></p>
         </div>
       </div>
       <!-- 图片 2 -->
       <div class="carousel-item" style="min-width: 100%; box-sizing: border-box;">
         <div class="image-container" style="display: block; width: 100%; padding: 10px; background-color: rgba(0, 0, 0, 0.1); box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); margin: 0 auto;">
-          <img src="./assets/img/posts/Nuuk/nuuk4.png" alt="Nuuk Image 2" style="display: block; width: 100%; height: 100%; object-fit: cover;" oncontextmenu="return false;" draggable="false" style="pointer-events: none;" />
-          <p style="text-align: center; font-size: 10px; margin: 5px 0 0 0;"><small>Nuuk Image 2 Description</small></p>
+          <img src="./assets/img/posts/Nuuk/nuuk4.png" alt="Nuuk Image 2" style="display: block; width: 100%; height: 100%; object-fit: cover;" />
+          <p style="text-align: center; margin: 10px 0 0 0;"><small>Nuuk Image 2 Description</small></p>
         </div>
       </div>
       <!-- 图片 3 -->
       <div class="carousel-item" style="min-width: 100%; box-sizing: border-box;">
         <div class="image-container" style="display: block; width: 100%; padding: 10px; background-color: rgba(0, 0, 0, 0.1); box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); margin: 0 auto;">
-          <img src="./assets/img/posts/Nuuk/nuuk5.png" alt="Nuuk Image 3" style="display: block; width: 100%; height: 100%; object-fit: cover;" oncontextmenu="return false;" draggable="false" style="pointer-events: none;" />
-          <p style="text-align: center; font-size: 10px; margin: 5px 0 0 0;"><small>Nuuk Image 3 Description</small></p>
+          <img src="./assets/img/posts/Nuuk/nuuk5.png" alt="Nuuk Image 3" style="display: block; width: 100%; height: 100%; object-fit: cover;" />
+          <p style="text-align: center; margin: 10px 0 0 0;"><small>Nuuk Image 3 Description</small></p>
         </div>
       </div>
     </div>
@@ -49,6 +49,23 @@ Who would have thought that life's winding paths would lead me here, to dwell am
     </div>
   </div>
 </div>
+
+<!-- 禁止长按图片触发下载菜单 -->
+<script>
+  document.addEventListener('contextmenu', function (e) {
+    if (e.target.tagName === 'IMG') {
+      e.preventDefault(); // 禁止长按菜单
+    }
+  });
+</script>
+
+<!-- 禁止用户在页面中选择文本 -->
+<style>
+  body {
+    -webkit-user-select: none; /* 禁止 Safari 和 iOS 选择 */
+    user-select: none;         /* 禁止现代浏览器选择 */
+  }
+</style>
 
 <script>
   let currentIndex = 0;
@@ -100,6 +117,12 @@ Who would have thought that life's winding paths would lead me here, to dwell am
     showSlide(currentIndex);
   }
 
+  // 上一张
+  function prevSlide() {
+    currentIndex--;
+    showSlide(currentIndex);
+  }
+
   // 点击指示器跳转
   indicators.forEach((indicator) => {
     indicator.addEventListener('click', () => {
@@ -115,35 +138,7 @@ Who would have thought that life's winding paths would lead me here, to dwell am
   // 监听窗口大小变化
   window.addEventListener('resize', adjustImageSize);
 
-  // 拖动功能（鼠标设备）
-  carouselInner.addEventListener('mousedown', (e) => {
-    startX = e.clientX;
-    isDragging = true;
-  });
-
-  carouselInner.addEventListener('mousemove', (e) => {
-    if (!isDragging) return;
-    const currentX = e.clientX;
-    const diffX = startX - currentX;
-    if (Math.abs(diffX) > 50) {
-      if (diffX > 0) {
-        nextSlide();
-      } else {
-        prevSlide();
-      }
-      isDragging = false;
-    }
-  });
-
-  carouselInner.addEventListener('mouseup', () => {
-    isDragging = false;
-  });
-
-  carouselInner.addEventListener('mouseleave', () => {
-    isDragging = false;
-  });
-  
-// 触摸滑动功能
+  // 触摸滑动功能
   let startX = 0;
   let isDragging = false;
 
@@ -180,35 +175,3 @@ Who would have thought that life's winding paths would lead me here, to dwell am
     });
   });
 </script>
-
-<!-- 监听触摸事件，阻止移动设备上长按触发的下载菜单 -->
-<script>
-  document.addEventListener('touchstart', function (e) {
-    if (e.target.tagName === 'IMG') {
-      e.preventDefault(); // 禁止触摸开始
-    }
-  });
-
-  document.addEventListener('touchmove', function (e) {
-    if (e.target.tagName === 'IMG') {
-      e.preventDefault(); // 禁止触摸移动
-    }
-  });
-
-  document.addEventListener('touchend', function (e) {
-    if (e.target.tagName === 'IMG') {
-      e.preventDefault(); // 禁止触摸结束
-    }
-  });
-</script>
-
-<!-- 禁止用户在页面中选择文本和图片 -->
-<style>
-  body, img {
-    -webkit-user-select: none; /* 禁止 Safari 和 iOS 选择 */
-    user-select: none;         /* 禁止现代浏览器选择 */
-  }
-  img {
-    pointer-events: none;      /* 禁用指针事件，防止复制图片 */
-  }
-</style>
