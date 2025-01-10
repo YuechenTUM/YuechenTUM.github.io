@@ -42,7 +42,7 @@ Who would have thought that life's winding paths would lead me here, to dwell am
       </div>
     </div>
     <!-- 指示器 -->
-    <div class="carousel-indicators" style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); display: flex; gap: 5px;">
+    <div class="carousel-indicators" style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); display: flex; gap: 5px; z-index: 10;">
       <span class="indicator" data-index="0" style="width: 20px; height: 3px; background-color: rgba(255, 255, 255, 0.5); cursor: pointer;"></span>
       <span class="indicator" data-index="1" style="width: 20px; height: 3px; background-color: rgba(255, 255, 255, 0.5); cursor: pointer;"></span>
       <span class="indicator" data-index="2" style="width: 20px; height: 3px; background-color: rgba(255, 255, 255, 0.5); cursor: pointer;"></span>
