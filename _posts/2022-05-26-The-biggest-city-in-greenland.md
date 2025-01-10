@@ -23,6 +23,8 @@ Who would have thought that life's winding paths would lead me here, to dwell am
   </div>
 </div>
 
+
+
 <div style="text-align: center;">
   <div class="carousel" style="position: relative; width: 80%; margin: 0 auto; overflow: hidden;">
     <div class="carousel-inner" style="display: flex; transition: transform 0.5s ease;">
@@ -68,4 +70,15 @@ Who would have thought that life's winding paths would lead me here, to dwell am
     currentIndex--;
     showSlide(currentIndex);
   }
+</script>
+
+
+<!-- 仅在图片上禁用右键菜单 -->
+<script>
+  document.querySelectorAll('img').forEach(img => {
+    img.addEventListener('contextmenu', function (e) {
+      e.preventDefault(); // 阻止默认右键菜单
+      alert('图片右键菜单已禁用！'); // 可选：弹出提示
+    });
+  });
 </script>
