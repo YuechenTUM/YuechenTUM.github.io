@@ -4,7 +4,7 @@ read_time: true
 show_date: true
 title: The biggest city in greenland
 date: 2023-02-10
-img: posts/Nuuk/Nuuk_homepage.png
+img: posts/Nuuk/nuuk_homepage.png
 tags: [travelogue,greenland]
 category: opinion
 author: Yueechen
