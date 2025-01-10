@@ -44,6 +44,12 @@ Who would have thought that life's winding paths would lead me here, to dwell am
     <!-- 翻页按钮 -->
     <button class="carousel-control-prev" onclick="prevSlide()" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background: rgba(0, 0, 0, 0.5); color: white; border: none; padding: 10px; cursor: pointer;">&#10094;</button>
     <button class="carousel-control-next" onclick="nextSlide()" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); background: rgba(0, 0, 0, 0.5); color: white; border: none; padding: 10px; cursor: pointer;">&#10095;</button>
+    <!-- 指示器 -->
+    <div class="carousel-indicators" style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); display: flex; gap: 5px;">
+      <span class="indicator" data-index="0" style="width: 20px; height: 3px; background-color: rgba(255, 255, 255, 0.5); cursor: pointer;"></span>
+      <span class="indicator" data-index="1" style="width: 20px; height: 3px; background-color: rgba(255, 255, 255, 0.5); cursor: pointer;"></span>
+      <span class="indicator" data-index="2" style="width: 20px; height: 3px; background-color: rgba(255, 255, 255, 0.5); cursor: pointer;"></span>
+    </div>
   </div>
 </div>
 
@@ -100,6 +106,8 @@ Who would have thought that life's winding paths would lead me here, to dwell am
     isDragging = false;
   });
 </script>
+
+
 
 <!-- 仅在图片上禁用右键菜单 -->
 <script>
