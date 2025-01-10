@@ -53,30 +53,53 @@ Who would have thought that life's winding paths would lead me here, to dwell am
   </div>
 </div>
 
+<!-- 指示器 -->
+    <div class="carousel-indicators" style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); display: flex; gap: 5px;">
+      <span class="indicator" data-index="0" style="width: 20px; height: 3px; background-color: rgba(255, 255, 255, 0.5); cursor: pointer;"></span>
+      <span class="indicator" data-index="1" style="width: 20px; height: 3px; background-color: rgba(255, 255, 255, 0.5); cursor: pointer;"></span>
+      <span class="indicator" data-index="2" style="width: 20px; height: 3px; background-color: rgba(255, 255, 255, 0.5); cursor: pointer;"></span>
+    </div>
+  </div>
+</div>
+
 <script>
   let currentIndex = 0;
-  let startX = 0;
-  let isDragging = false;
-
   const carouselInner = document.querySelector('.carousel-inner');
+  const indicators = document.querySelectorAll('.indicator');
 
-  // 轮播逻辑
+  // 显示指定索引的图片
   function showSlide(index) {
     const totalItems = document.querySelectorAll('.carousel-item').length;
     if (index >= totalItems) currentIndex = 0;
     if (index < 0) currentIndex = totalItems - 1;
     carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
+    updateIndicators();
   }
 
+  // 更新指示器状态
+  function updateIndicators() {
+    indicators.forEach((indicator, i) => {
+      if (i === currentIndex) {
+        indicator.style.backgroundColor = 'rgba(255, 255, 255, 1)'; // 激活状态
+      } else {
+        indicator.style.backgroundColor = 'rgba(255, 255, 255, 0.5)'; // 默认状态
+      }
+    });
+  }
+
+  // 下一张
   function nextSlide() {
     currentIndex++;
     showSlide(currentIndex);
   }
 
-  function prevSlide() {
-    currentIndex--;
-    showSlide(currentIndex);
-  }
+  // 点击指示器跳转
+  indicators.forEach((indicator) => {
+    indicator.addEventListener('click', () => {
+      currentIndex = parseInt(indicator.getAttribute('data-index'));
+      showSlide(currentIndex);
+    });
+  });
 
   // 拖动功能（鼠标设备）
   carouselInner.addEventListener('mousedown', (e) => {
