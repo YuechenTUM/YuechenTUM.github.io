@@ -65,10 +65,31 @@ description: Root in Sisimiut and embrace the enchanting polar night and day, ba
   }
 </script>
 
-<!-- 禁止图片右键菜单和长按下载 -->
+<!-- 仅在图片上禁用右键菜单 -->
 <script>
   document.querySelectorAll('img').forEach(img => {
-    img.addEventListener('contextmenu', (e) => e.preventDefault()); // 禁用右键菜单
-    img.addEventListener('mousedown', (e) => e.preventDefault()); // 禁用长按菜单
+    img.addEventListener('contextmenu', function (e) {
+      e.preventDefault(); // 阻止默认右键菜单
+    });
   });
 </script>
+
+<!-- 禁止长按图片触发下载菜单 -->
+<script>
+  document.addEventListener('contextmenu', function (e) {
+    if (e.target.tagName === 'IMG') {
+      e.preventDefault(); // 禁止长按菜单
+    }
+  });
+<script>
+  let currentIndex = 0
+</script>
+
+<!-- 禁止用户在页面中选择文本 -->
+<style>
+  body {
+    -webkit-user-select: none; /* 禁止 Safari 和 iOS 选择 */
+    user-select: none;         /* 禁止现代浏览器选择 */
+  }
+</style>
+
