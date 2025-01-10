@@ -130,3 +130,14 @@ Who would have thought that life's winding paths would lead me here, to dwell am
     }
   });
 </script>
+
+<!-- 禁止用户在页面中选择文本和图片 -->
+<style>
+  body, img {
+    -webkit-user-select: none; /* 禁止 Safari 和 iOS 选择 */
+    user-select: none;         /* 禁止现代浏览器选择 */
+  }
+  img {
+    pointer-events: none;      /* 禁用指针事件，防止复制图片 */
+  }
+</style>
