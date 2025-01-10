@@ -21,21 +21,21 @@ Who would have thought that life's winding paths would lead me here, to dwell am
     <div class="carousel-inner" style="display: flex; transition: transform 0.5s ease;">
       <!-- 图片 1 -->
       <div class="carousel-item" style="min-width: 100%; box-sizing: border-box;">
-        <div style="display: block; width: 90%; padding: 10px; background-color: rgba(0, 0, 0, 0.1); box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); margin: 0 auto;">
+        <div style="display: block; width: 100%; padding: 10px; background-color: rgba(0, 0, 0, 0.1); box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); margin: 0 auto;">
           <img src="./assets/img/posts/Nuuk/nuuk2.png" alt="Nuuk Image 1" style="display: block; width: 100%; height: auto;" oncontextmenu="return false;" draggable="false" style="pointer-events: none;" />
           <p style="text-align: center; margin: 10px 0 0 0;"><small>Nuuk Image 1 Description</small></p>
         </div>
       </div>
       <!-- 图片 2 -->
       <div class="carousel-item" style="min-width: 100%; box-sizing: border-box;">
-        <div style="display: block; width: 90%; padding: 10px; background-color: rgba(0, 0, 0, 0.1); box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); margin: 0 auto;">
+        <div style="display: block; width: 100%; padding: 10px; background-color: rgba(0, 0, 0, 0.1); box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); margin: 0 auto;">
           <img src="./assets/img/posts/Nuuk/nuuk4.png" alt="Nuuk Image 2" style="display: block; width: 100%; height: auto;" oncontextmenu="return false;" draggable="false" style="pointer-events: none;" />
           <p style="text-align: center; margin: 10px 0 0 0;"><small>Nuuk Image 2 Description</small></p>
         </div>
       </div>
       <!-- 图片 3 -->
       <div class="carousel-item" style="min-width: 100%; box-sizing: border-box;">
-        <div style="display: block; width: 90%; padding: 10px; background-color: rgba(0, 0, 0, 0.1); box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); margin: 0 auto;">
+        <div style="display: block; width: 100%; padding: 10px; background-color: rgba(0, 0, 0, 0.1); box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); margin: 0 auto;">
           <img src="./assets/img/posts/Nuuk/nuuk5.png" alt="Nuuk Image 3" style="display: block; width: 100%; height: auto;" oncontextmenu="return false;" draggable="false" style="pointer-events: none;" />
           <p style="text-align: center; margin: 10px 0 0 0;"><small>Nuuk Image 3 Description</small></p>
         </div>
@@ -54,14 +54,26 @@ Who would have thought that life's winding paths would lead me here, to dwell am
   let currentIndex = 0;
   const carouselInner = document.querySelector('.carousel-inner');
   const indicators = document.querySelectorAll('.indicator');
+  const carouselItems = document.querySelectorAll('.carousel-item');
+
+  // 动态调整指示器位置
+  function adjustIndicatorsPosition() {
+    const activeItem = carouselItems[currentIndex];
+    const activeImage = activeItem.querySelector('img');
+    const imageHeight = activeImage.clientHeight;
+
+    const indicatorsContainer = document.querySelector('.carousel-indicators');
+    indicatorsContainer.style.bottom = `${imageHeight + 20}px`; // 20px 为底部间距
+  }
 
   // 显示指定索引的图片
   function showSlide(index) {
-    const totalItems = document.querySelectorAll('.carousel-item').length;
+    const totalItems = carouselItems.length;
     if (index >= totalItems) currentIndex = 0;
     if (index < 0) currentIndex = totalItems - 1;
     carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
     updateIndicators();
+    adjustIndicatorsPosition(); // 调整指示器位置
   }
 
   // 更新指示器状态
@@ -88,7 +100,14 @@ Who would have thought that life's winding paths would lead me here, to dwell am
       showSlide(currentIndex);
     });
   });
-  
+
+  // 初始化
+  updateIndicators();
+  adjustIndicatorsPosition(); // 初始化时调整指示器位置
+
+  // 监听窗口大小变化
+  window.addEventListener('resize', adjustIndicatorsPosition);
+
   // 拖动功能（鼠标设备）
   carouselInner.addEventListener('mousedown', (e) => {
     startX = e.clientX;
