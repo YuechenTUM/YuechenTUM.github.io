@@ -17,30 +17,19 @@ Who would have thought that life's winding paths would lead me here, to dwell am
 <p>Sisimiut lies roughly 320 kilometres north of the capital, Nuuk, and about 75 kilometres north of the Arctic Circle.<sup><a href="https://archive.org/details/greenlandarcticl0000etai/page/8/mode/2up" style="text-decoration: none;">[1]</a></sup> Its name, drawn from the Greenlandic words sisi, meaning "fox den," and miut, meaning "those who live in,"<sup><a href="https://ordbog.gl/2018-kal-eng/#e14271" style="text-decoration: none;">[2]</a></sup> conjures an image of resilient people who have carved out a life in this stark and untamed expanse, and fostering an intimate bond with the natures. Formerly known as Holsteinsborg—a name after Johann Ludwig Holstein that carries the memory of its colonial past.<sup><a href="https://da.wikipedia.org/wiki/Sisimiut" style="text-decoration: none;">[3]</a></sup></p>
 
 <div style="text-align: center;">
-  <div style="display: block; width: 80%; padding: 10px; background-color: rgba(0, 0, 0, 0.1); box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); margin: 0 auto;">
-    <img src="./assets/img/posts/Sisimiut/Apisseq.jpg" alt="Engineers's house Apisseq" style="display: block; width: 100%; height: auto;">
-    <p style="text-align: center; margin: 10px 0 0 0;"><small>Engineers's house Apisseq (Photo by Malik Broberg)</small></p>
-  </div>
-</div>
-
-
-
-<div style="text-align: center;">
   <div class="carousel" style="position: relative; width: 80%; margin: 0 auto; overflow: hidden;">
     <div class="carousel-inner" style="display: flex; transition: transform 0.5s ease;">
-      <!-- 图片 1 -->
+      <!-- 动态加载的图片容器 -->
       <div class="carousel-item" style="min-width: 100%; box-sizing: border-box;">
-        <img src="./assets/img/posts/Nuuk/nuuk1.png" alt="Nuuk Image 1" style="width: 100%; height: auto;">
+        <div id="image1" style="width: 100%; height: auto;"></div>
         <p style="text-align: center; margin: 10px 0 0 0;"><small>Nuuk Image 1 Description</small></p>
       </div>
-      <!-- 图片 2 -->
       <div class="carousel-item" style="min-width: 100%; box-sizing: border-box;">
-        <img src="./assets/img/posts/Nuuk/nuuk2.png" alt="Nuuk Image 2" style="width: 100%; height: auto;">
+        <div id="image2" style="width: 100%; height: auto;"></div>
         <p style="text-align: center; margin: 10px 0 0 0;"><small>Nuuk Image 2 Description</small></p>
       </div>
-      <!-- 图片 3 -->
       <div class="carousel-item" style="min-width: 100%; box-sizing: border-box;">
-        <img src="./assets/img/posts/Nuuk/nuuk3.png" alt="Nuuk Image 3" style="width: 100%; height: auto;">
+        <div id="image3" style="width: 100%; height: auto;"></div>
         <p style="text-align: center; margin: 10px 0 0 0;"><small>Nuuk Image 3 Description</small></p>
       </div>
     </div>
@@ -51,6 +40,22 @@ Who would have thought that life's winding paths would lead me here, to dwell am
 </div>
 
 <script>
+  // 动态加载图片
+  const images = [
+    { id: 'image1', src: './assets/img/posts/Nuuk/nuuk1.png' },
+    { id: 'image2', src: './assets/img/posts/Nuuk/nuuk2.png' },
+    { id: 'image3', src: './assets/img/posts/Nuuk/nuuk3.png' }
+  ];
+
+  images.forEach(image => {
+    const img = new Image();
+    img.src = image.src;
+    img.style.width = '100%';
+    img.style.height = 'auto';
+    document.getElementById(image.id).appendChild(img);
+  });
+
+  // 轮播逻辑
   let currentIndex = 0;
 
   function showSlide(index) {
@@ -72,13 +77,11 @@ Who would have thought that life's winding paths would lead me here, to dwell am
   }
 </script>
 
-
 <!-- 仅在图片上禁用右键菜单 -->
 <script>
   document.querySelectorAll('img').forEach(img => {
     img.addEventListener('contextmenu', function (e) {
       e.preventDefault(); // 阻止默认右键菜单
-      alert('图片右键菜单已禁用！'); // 可选：弹出提示
     });
   });
 </script>
