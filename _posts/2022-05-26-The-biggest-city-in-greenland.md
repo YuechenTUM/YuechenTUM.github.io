@@ -112,11 +112,9 @@ Who would have thought that life's winding paths would lead me here, to dwell am
 
 <!-- 监听触摸事件，阻止移动设备上长按触发的下载菜单 -->
 <script>
-  document.querySelectorAll('img').forEach(img => {
-    img.addEventListener('touchstart', function (e) {
-      if (e.touches.length === 1) {
-        e.preventDefault(); // 阻止触摸行为
-      }
-    });
+  document.addEventListener('touchstart', function (e) {
+    if (e.target.tagName === 'IMG') {
+      e.preventDefault(); // 禁止长按
+    }
   });
 </script>
