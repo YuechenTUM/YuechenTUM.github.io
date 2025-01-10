@@ -21,22 +21,22 @@ Who would have thought that life's winding paths would lead me here, to dwell am
     <div class="carousel-inner" style="display: flex; transition: transform 0.5s ease;">
       <!-- 图片 1 -->
       <div class="carousel-item" style="min-width: 100%; box-sizing: border-box;">
-        <div style="display: block; width: 100%; padding: 10px; background-color: rgba(0, 0, 0, 0.1); box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); margin: 0 auto;">
-          <img src="./assets/img/posts/Nuuk/nuuk2.png" alt="Nuuk Image 1" style="display: block; width: 100%; height: auto;" oncontextmenu="return false;" draggable="false" />
+        <div style="display: block; width: 100%; padding: 10px; background-color: rgba(0, 0, 0, 0.1); box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); margin: 0 auto;" >
+          <img src="./assets/img/posts/Nuuk/nuuk2.png" alt="Nuuk Image 1" style="display: block; width: 100%; height: auto;" oncontextmenu="return false;" draggable="false" style="pointer-events: none;" />
           <p style="text-align: center; margin: 10px 0 0 0;"><small>Nuuk Image 1 Description</small></p>
         </div>
       </div>
       <!-- 图片 2 -->
       <div class="carousel-item" style="min-width: 100%; box-sizing: border-box;">
         <div style="display: block; width: 100%; padding: 10px; background-color: rgba(0, 0, 0, 0.1); box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); margin: 0 auto;">
-          <img src="./assets/img/posts/Nuuk/nuuk4.png" alt="Nuuk Image 2" style="display: block; width: 100%; height: auto;" oncontextmenu="return false;" draggable="false" />
+          <img src="./assets/img/posts/Nuuk/nuuk4.png" alt="Nuuk Image 2" style="display: block; width: 100%; height: auto;" oncontextmenu="return false;" draggable="false" style="pointer-events: none;" />
           <p style="text-align: center; margin: 10px 0 0 0;"><small>Nuuk Image 2 Description</small></p>
         </div>
       </div>
       <!-- 图片 3 -->
       <div class="carousel-item" style="min-width: 100%; box-sizing: border-box;">
         <div style="display: block; width: 100%; padding: 10px; background-color: rgba(0, 0, 0, 0.1); box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); margin: 0 auto;">
-          <img src="./assets/img/posts/Nuuk/nuuk5.png" alt="Nuuk Image 3" style="display: block; width: 100%; height: auto;" oncontextmenu="return false;" draggable="false" />
+          <img src="./assets/img/posts/Nuuk/nuuk5.png" alt="Nuuk Image 3" style="display: block; width: 100%; height: auto;" oncontextmenu="return false;" draggable="false" style="pointer-events: none;" />
           <p style="text-align: center; margin: 10px 0 0 0;"><small>Nuuk Image 3 Description</small></p>
         </div>
       </div>
@@ -114,7 +114,19 @@ Who would have thought that life's winding paths would lead me here, to dwell am
 <script>
   document.addEventListener('touchstart', function (e) {
     if (e.target.tagName === 'IMG') {
-      e.preventDefault(); // 禁止长按
+      e.preventDefault(); // 禁止触摸开始
+    }
+  });
+
+  document.addEventListener('touchmove', function (e) {
+    if (e.target.tagName === 'IMG') {
+      e.preventDefault(); // 禁止触摸移动
+    }
+  });
+
+  document.addEventListener('touchend', function (e) {
+    if (e.target.tagName === 'IMG') {
+      e.preventDefault(); // 禁止触摸结束
     }
   });
 </script>
