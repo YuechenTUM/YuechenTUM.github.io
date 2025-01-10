@@ -4,7 +4,7 @@ read_time: true
 show_date: true
 title: The biggest city in greenland
 date: 2023-02-10
-img: posts/Sisimiut/greenland.jpg
+img: https://visitgreenland.photoshelter.com/search/result/I0000IEfZlnDZmkU?terms=nuuk&
 tags: [travelogue,greenland]
 category: opinion
 author: Yueechen
