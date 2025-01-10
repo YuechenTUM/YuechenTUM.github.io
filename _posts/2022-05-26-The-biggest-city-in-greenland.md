@@ -21,21 +21,21 @@ Who would have thought that life's winding paths would lead me here, to dwell am
     <div class="carousel-inner" style="display: flex; transition: transform 0.5s ease;">
       <!-- 图片 1 -->
       <div class="carousel-item" style="min-width: 100%; box-sizing: border-box;">
-        <div style="display: block; width: 80%; padding: 10px; background-color: rgba(0, 0, 0, 0.1); box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); margin: 0 auto;">
+        <div style="display: block; width: 100%; padding: 10px; background-color: rgba(0, 0, 0, 0.1); box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); margin: 0 auto;">
           <img src="./assets/img/posts/Nuuk/nuuk2.png" alt="Nuuk Image 1" style="display: block; width: 100%; height: auto;">
           <p style="text-align: center; margin: 10px 0 0 0;"><small>Nuuk Image 1 Description</small></p>
         </div>
       </div>
       <!-- 图片 2 -->
       <div class="carousel-item" style="min-width: 100%; box-sizing: border-box;">
-        <div style="display: block; width: 80%; padding: 10px; background-color: rgba(0, 0, 0, 0.1); box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); margin: 0 auto;">
+        <div style="display: block; width: 100%; padding: 10px; background-color: rgba(0, 0, 0, 0.1); box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); margin: 0 auto;">
           <img src="./assets/img/posts/Nuuk/nuuk4.png" alt="Nuuk Image 2" style="display: block; width: 100%; height: auto;">
           <p style="text-align: center; margin: 10px 0 0 0;"><small>Nuuk Image 2 Description</small></p>
         </div>
       </div>
       <!-- 图片 3 -->
       <div class="carousel-item" style="min-width: 100%; box-sizing: border-box;">
-        <div style="display: block; width: 80%; padding: 10px; background-color: rgba(0, 0, 0, 0.1); box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); margin: 0 auto;">
+        <div style="display: block; width: 100%; padding: 10px; background-color: rgba(0, 0, 0, 0.1); box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); margin: 0 auto;">
           <img src="./assets/img/posts/Nuuk/nuuk5.png" alt="Nuuk Image 3" style="display: block; width: 100%; height: auto;">
           <p style="text-align: center; margin: 10px 0 0 0;"><small>Nuuk Image 3 Description</small></p>
         </div>
@@ -47,45 +47,6 @@ Who would have thought that life's winding paths would lead me here, to dwell am
   </div>
 </div>
 
-<!-- 禁止长按图片触发下载菜单 -->
-<script>
-  document.addEventListener('contextmenu', function (e) {
-    if (e.target.tagName === 'IMG') {
-      e.preventDefault(); // 禁止长按菜单
-    }
-  });
-<script>
-
-  // 触摸滑动功能
-  let startX = 0;
-  let isDragging = false;
-
-  carouselInner.addEventListener('touchstart', (e) => {
-    startX = e.touches[0].clientX; // 记录触摸起始位置
-    isDragging = true;
-  });
-
-  carouselInner.addEventListener('touchmove', (e) => {
-    if (!isDragging) return;
-    const currentX = e.touches[0].clientX; // 获取当前触摸位置
-    const diffX = startX - currentX; // 计算滑动距离
-
-    // 如果滑动距离超过 50px，切换图片
-    if (Math.abs(diffX) > 50) {
-      if (diffX > 0) {
-        nextSlide(); // 向右滑动，切换到下一张
-      } else {
-        prevSlide(); // 向左滑动，切换到上一张
-      }
-      isDragging = false; // 结束拖动
-    }
-  });
-
-  carouselInner.addEventListener('touchend', () => {
-    isDragging = false; // 结束拖动
-  });
-
-
 <!-- 仅在图片上禁用右键菜单 -->
 <script>
   document.querySelectorAll('img').forEach(img => {
@@ -94,3 +55,12 @@ Who would have thought that life's winding paths would lead me here, to dwell am
     });
   });
 </script>
+
+<!-- 禁止长按图片触发下载菜单 -->
+<script>
+  document.addEventListener('contextmenu', function (e) {
+    if (e.target.tagName === 'IMG') {
+      e.preventDefault(); // 禁止长按菜单
+    }
+  });
+<script>
