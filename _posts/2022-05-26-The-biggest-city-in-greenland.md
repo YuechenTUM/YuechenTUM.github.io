@@ -21,21 +21,21 @@ Who would have thought that life's winding paths would lead me here, to dwell am
     <div class="carousel-inner" style="display: flex; transition: transform 0.5s ease;">
       <!-- 图片 1 -->
       <div class="carousel-item" style="min-width: 100%; box-sizing: border-box;">
-        <div style="display: block; width: 100%; padding: 10px; background-color: rgba(0, 0, 0, 0.1); box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); margin: 0 auto;">
+        <div class="image-container" style="display: block; width: 100%; padding: 10px; background-color: rgba(0, 0, 0, 0.1); box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); margin: 0 auto;">
           <img src="./assets/img/posts/Nuuk/nuuk2.png" alt="Nuuk Image 1" style="display: block; width: 100%; height: auto;" oncontextmenu="return false;" draggable="false" style="pointer-events: none;" />
           <p style="text-align: center; margin: 10px 0 0 0;"><small>Nuuk Image 1 Description</small></p>
         </div>
       </div>
       <!-- 图片 2 -->
       <div class="carousel-item" style="min-width: 100%; box-sizing: border-box;">
-        <div style="display: block; width: 100%; padding: 10px; background-color: rgba(0, 0, 0, 0.1); box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); margin: 0 auto;">
+        <div class="image-container" style="display: block; width: 100%; padding: 10px; background-color: rgba(0, 0, 0, 0.1); box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); margin: 0 auto;">
           <img src="./assets/img/posts/Nuuk/nuuk4.png" alt="Nuuk Image 2" style="display: block; width: 100%; height: auto;" oncontextmenu="return false;" draggable="false" style="pointer-events: none;" />
           <p style="text-align: center; margin: 10px 0 0 0;"><small>Nuuk Image 2 Description</small></p>
         </div>
       </div>
       <!-- 图片 3 -->
       <div class="carousel-item" style="min-width: 100%; box-sizing: border-box;">
-        <div style="display: block; width: 100%; padding: 10px; background-color: rgba(0, 0, 0, 0.1); box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); margin: 0 auto;">
+        <div class="image-container" style="display: block; width: 100%; padding: 10px; background-color: rgba(0, 0, 0, 0.1); box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); margin: 0 auto;">
           <img src="./assets/img/posts/Nuuk/nuuk5.png" alt="Nuuk Image 3" style="display: block; width: 100%; height: auto;" oncontextmenu="return false;" draggable="false" style="pointer-events: none;" />
           <p style="text-align: center; margin: 10px 0 0 0;"><small>Nuuk Image 3 Description</small></p>
         </div>
@@ -55,15 +55,23 @@ Who would have thought that life's winding paths would lead me here, to dwell am
   const carouselInner = document.querySelector('.carousel-inner');
   const indicators = document.querySelectorAll('.indicator');
   const carouselItems = document.querySelectorAll('.carousel-item');
+  const imageContainers = document.querySelectorAll('.image-container');
 
-  // 动态调整指示器位置
-  function adjustIndicatorsPosition() {
-    const activeItem = carouselItems[currentIndex];
-    const activeImage = activeItem.querySelector('img');
-    const imageHeight = activeImage.clientHeight;
+  // 动态调整图片大小
+  function adjustImageSize() {
+    let maxHeight = 0;
 
-    const indicatorsContainer = document.querySelector('.carousel-indicators');
-    indicatorsContainer.style.bottom = `${imageHeight + 20}px`; // 20px 为底部间距
+    // 找到所有图片容器中的最大高度
+    imageContainers.forEach(container => {
+      if (container.clientHeight > maxHeight) {
+        maxHeight = container.clientHeight;
+      }
+    });
+
+    // 将所有图片容器的高度设置为最大高度
+    imageContainers.forEach(container => {
+      container.style.height = `${maxHeight}px`;
+    });
   }
 
   // 显示指定索引的图片
@@ -73,7 +81,6 @@ Who would have thought that life's winding paths would lead me here, to dwell am
     if (index < 0) currentIndex = totalItems - 1;
     carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
     updateIndicators();
-    adjustIndicatorsPosition(); // 调整指示器位置
   }
 
   // 更新指示器状态
@@ -102,11 +109,11 @@ Who would have thought that life's winding paths would lead me here, to dwell am
   });
 
   // 初始化
+  adjustImageSize(); // 动态调整图片大小
   updateIndicators();
-  adjustIndicatorsPosition(); // 初始化时调整指示器位置
 
   // 监听窗口大小变化
-  window.addEventListener('resize', adjustIndicatorsPosition);
+  window.addEventListener('resize', adjustImageSize);
 
   // 拖动功能（鼠标设备）
   carouselInner.addEventListener('mousedown', (e) => {
