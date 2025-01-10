@@ -65,31 +65,27 @@ description: Root in Sisimiut and embrace the enchanting polar night and day, ba
   }
 </script>
 
-<!-- 仅在图片上禁用右键菜单 -->
+<!-- 禁止图片右键菜单和长按下载 -->
 <script>
   document.querySelectorAll('img').forEach(img => {
-    img.addEventListener('contextmenu', function (e) {
-      e.preventDefault(); // 阻止默认右键菜单
-    });
-  });
-</script>
+    // 禁用右键菜单
+    img.addEventListener('contextmenu', (e) => e.preventDefault());
 
-<!-- 禁止长按图片触发下载菜单 -->
-<script>
-  document.addEventListener('contextmenu', function (e) {
-    if (e.target.tagName === 'IMG') {
-      e.preventDefault(); // 禁止长按菜单
-    }
+    // 禁用长按菜单（兼容 iOS）
+    img.addEventListener('touchstart', (e) => e.preventDefault(), { passive: false });
+    img.addEventListener('touchend', (e) => e.preventDefault(), { passive: false });
+
+    // 禁用图片的指针事件
+    img.style.pointerEvents = 'none';
   });
-<script>
-  let currentIndex = 0
 </script>
 
 <!-- 禁止用户在页面中选择文本 -->
 <style>
   body {
-    -webkit-user-select: none; /* 禁止 Safari 和 iOS 选择 */
-    user-select: none;         /* 禁止现代浏览器选择 */
+    -webkit-user-select: none; /* Safari 和 iOS */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* IE 10+ */
+    user-select: none;         /* 现代浏览器 */
   }
 </style>
-
