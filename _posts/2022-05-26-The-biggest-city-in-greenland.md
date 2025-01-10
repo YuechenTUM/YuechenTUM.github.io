@@ -31,7 +31,7 @@ Who would have thought that life's winding paths would lead me here, to dwell am
       </div>
       <!-- 图片 3 -->
       <div class="carousel-item" style="min-width: 100%; box-sizing: border-box;">
-        <img src="./assets/img/posts/Nuuk/nuuk3.png" alt="Nuuk Image 3" style="width: 100%; height: auto;">
+        <img src="./assets/img/posts/Nuuk/nuuk4.png" alt="Nuuk Image 3" style="width: 100%; height: auto;">
         <p style="text-align: center; margin: 10px 0 0 0;"><small>Nuuk Image 3 Description</small></p>
       </div>
     </div>
@@ -65,30 +65,6 @@ Who would have thought that life's winding paths would lead me here, to dwell am
     currentIndex--;
     showSlide(currentIndex);
   }
-
-  // 滑动功能（触摸设备）
-  carouselInner.addEventListener('touchstart', (e) => {
-    startX = e.touches[0].clientX;
-    isDragging = true;
-  });
-
-  carouselInner.addEventListener('touchmove', (e) => {
-    if (!isDragging) return;
-    const currentX = e.touches[0].clientX;
-    const diffX = startX - currentX;
-    if (Math.abs(diffX) > 20) {
-      if (diffX > 0) {
-        nextSlide();
-      } else {
-        prevSlide();
-      }
-      isDragging = false;
-    }
-  });
-
-  carouselInner.addEventListener('touchend', () => {
-    isDragging = false;
-  });
 
   // 拖动功能（鼠标设备）
   carouselInner.addEventListener('mousedown', (e) => {
