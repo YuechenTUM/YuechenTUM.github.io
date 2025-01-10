@@ -63,27 +63,6 @@ Who would have thought that life's winding paths would lead me here, to dwell am
   }
 </script>
 
-<!-- 混淆图片 URL -->
-<div id="imageContainer" style="width: 100%; height: 300px;"></div>
-
-<script>
-  // 混淆图片 URL
-  function getImageUrl() {
-    const parts = [
-      './as', 'sets/', 'img/', 'posts/', 'Nu', 'uk/', 'nu', 'uk1', '.pn', 'g'
-    ];
-    return parts.join('');
-  }
-
-  // 动态加载图片
-  const imageContainer = document.getElementById('imageContainer');
-  const img = new Image();
-  img.src = getImageUrl(); // 获取混淆后的图片 URL
-  img.style.width = '100%';
-  img.style.height = 'auto';
-  imageContainer.appendChild(img);
-</script>
-
 <!-- 仅在图片上禁用右键菜单 -->
 <script>
   document.querySelectorAll('img').forEach(img => {
