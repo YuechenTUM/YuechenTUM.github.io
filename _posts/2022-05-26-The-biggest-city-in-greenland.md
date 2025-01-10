@@ -76,7 +76,7 @@ Who would have thought that life's winding paths would lead me here, to dwell am
     if (!isDragging) return;
     const currentX = e.touches[0].clientX;
     const diffX = startX - currentX;
-    if (Math.abs(diffX) > 50) {
+    if (Math.abs(diffX) > 20) {
       if (diffX > 0) {
         nextSlide();
       } else {
